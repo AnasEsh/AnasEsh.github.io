@@ -23,15 +23,16 @@
     flex-wrap: wrap;
 } */
 :root {
-    --hcolor: aliceblue;
+    --hcolor: #f0f8ff;
     --lightBlack: rgba(0, 0, 0, 0.123);
     --c2: #86736a;
-    --c1: burlywood;
+    --c1: #deb887;
     --lightC1: rgba(222, 184, 135, 0.329);
-    --black: black;
+    --black: #000;
     scroll-behavior: smooth;
-    --fcsColor: aliceblue;
+    --fcsColor: #f0f8ff;
     --headerH: 0;
+    --brown: #a52a2a;
     --intoduceIn: .9s
 }
 
@@ -501,7 +502,7 @@ ul.skills-list li svg {
 
 .points-list li {
     margin: 0 0 20px 0;
-    color: brown;
+    color: var(--brown);
     font-weight: bold;
 }
 
@@ -631,7 +632,7 @@ div#achievements p:not(:last-of-type) {
 
 .gained-focus {
     transition-delay: .1s;
-    color: brown;
+    color: var(--brown);
     transform: scale(1.2);
     text-shadow: 5px 3px 3px #00000036;
     letter-spacing: 1.2px;
