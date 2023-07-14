@@ -4,24 +4,7 @@
     color: inherit !important;
 }
 
-/* element.style {
-    width: 100vw;
-    height: 100vh vh;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 100;
-    text-align: center;
-    transform: translate(-50%, -50%);
-    background: #00000085;
-    display: flex;
-    justify-content: center;
-    color: white;
-    align-items: center;
-    font-size: 3.5rem;
-    backdrop-filter: blur(5px) brightness(0.8);
-    flex-wrap: wrap;
-} */
+
 :root {
     --hcolor: #f0f8ff;
     --lightBlack: rgba(0, 0, 0, 0.123);
@@ -66,9 +49,19 @@ body {
     z-index: -100;
 }
 
-@media (prefers-color-scheme: dark) {
-    #bg-video {
-        filter: brightness(0.5);
+@media (prefers-color-scheme: dark),
+(prefers-color-scheme: dark) {
+    :root {
+        --hcolor: #f0f8ff !important;
+        --lightBlack: rgba(0, 0, 0, 0.123) !important;
+        --c2: #86736a !important;
+        --c1: #deb887 !important;
+        --lightC1: rgba(222, 184, 135, 0.329) !important;
+        --black: #000 !important;
+        scroll-behavior: smooth;
+        --fcsColor: #f0f8ff !important;
+        --brown: #a52a2a !important;
+        --intoduceIn: .9s
     }
 }
 
@@ -711,5 +704,33 @@ video:fullscreen {
     .nav-bar ul {
         flex-wrap: wrap;
         justify-content: space-evenly;
+    }
+
+    #education>div div {
+
+        text-align: center;
+    }
+}
+
+@media (max-width:450px) {
+    .points-list li {
+        margin: 0 0 15px 0;
+
+        font-size: .7rem;
+    }
+
+    div#achievements p {
+        font-size: medium;
+
+    }
+
+    .width8 {
+        width: 92%;
+    }
+
+    #education>div div {
+
+        text-align: center;
+        font-size: .85rem;
     }
 }
