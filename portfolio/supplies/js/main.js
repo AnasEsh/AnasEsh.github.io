@@ -45,7 +45,7 @@ const kvRads = new Map(Array.from(navRads).map((e) => [e.getAttribute('data-cont
 const focusClass = 'gained-focus'
 
 function updateTopPadding() {
-    document.querySelector(':root').style.setProperty("--headerH", `${document.body.querySelector('header').clientHeight + 10}px`)
+    document.querySelector(':root').style.setProperty("--headerH", `${document.body.querySelector('header').clientHeight + 10}px `)
 }
 function checkNavRad(name) {
     kvRads.get(name).checked = true

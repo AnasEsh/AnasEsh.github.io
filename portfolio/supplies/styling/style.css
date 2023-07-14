@@ -36,6 +36,22 @@
     --intoduceIn: .9s
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --hcolor: #f0f8ff !important;
+        --lightBlack: rgba(0, 0, 0, 0.123) !important;
+        --c2: #86736a !important;
+        --c1: #deb887 !important;
+        --lightC1: rgba(222, 184, 135, 0.329) !important;
+        --black: #000 !important;
+        scroll-behavior: smooth !important;
+        --fcsColor: #f0f8ff !important;
+
+        --brown: #a52a2a !important;
+        --intoduceIn: .9s
+    }
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
