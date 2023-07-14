@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="supplies/style.css">
+    <link rel="stylesheet" href="supplies/styling/swiper.css">
+    <link rel="stylesheet" href="supplies/styling/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -13,235 +15,86 @@
 </head>
 
 <body>
-    <h2 style="color: red; position: fixed; left: 50%;top: 5%;z-index: 10; transform: translateX(-50%);">*This site
+    <!-- <h2 style="color: red; position: fixed; left: 50%;top: 5%;z-index: 10; transform: translateX(-50%);">*This site
         still under
-        development</h2>
+        development</h2> -->
     <header>
         <nav class="nav-bar">
-            <div id="pname"><span class="material-symbols-outlined">
-                    person
-                </span> Anas Eshtaiwi
-
+            <div id="intro">
+                <div id="name" class="centered-flex">
+                    <span class="material-symbols-outlined">
+                        person
+                    </span> Anas Eshtaiwi
+                </div>
+                <h1 class="centered-flex">Welcome <span class="material-symbols-outlined">
+                        waving_hand
+                    </span></h1>
+                <section id="brief" class="centered-flex col-flex">
+                    <h2 id="name" class="centered-flex"><span class="material-symbols-outlined">
+                            person
+                        </span> Anas Eshtaiwi
+                    </h2>
+                    <p class="centered-flex">
+                        Fresh computer science graduate, passionate coder and looking for a job in software
+                        development.
+                        with experience in developing web, and mobile apps
+                    </p>
             </div>
             <ul>
-                <li> <a href=""><span class="material-symbols-outlined">
-                            code
-                        </span>Projects</a></li>
-                <li><a href=""><span class="material-symbols-outlined">
-                            handyman
-                        </span>Skills</a></li>
-                <li><a href=""><span class="material-symbols-outlined">
-                            school
-                        </span>Eduaction</a></li>
-                <li><a href=""><span class="material-symbols-outlined">
-                            trophy
-                        </span>Acheivments</a></li>
+                <li>
+                    <input data-content="projects" checked type="radio" id="proj-radio" name="section-rad">
+                    <label for="proj-radio">
+                        <span class="material-symbols-outlined">code</span>
+                        Projects
+                    </label>
+                </li>
+                <li>
+                    <input data-content="skills" type="radio" id="skill-radio" name="section-rad">
+                    <label for="skill-radio">
+                        <span class="material-symbols-outlined">handyman</span>
+                        Skills
+                    </label>
+                </li>
+                <li>
+                    <input data-content="education" type="radio" id="edu-radio" name="section-rad">
+                    <label for="edu-radio">
+                        <span class="material-symbols-outlined">school</span>
+                        Education
+                    </label>
+                </li>
+                <li>
+                    <input data-content="achievements" type="radio" id="ach-radio" name="section-rad">
+                    <label for="ach-radio">
+                        <span class="material-symbols-outlined">trophy</span>
+                        Achievements
+                    </label>
+                </li>
             </ul>
         </nav>
     </header>
+    <video autoplay muted loop id="bg-video">
+        <source src="supplies/vids/bg.mp4" type="video/mp4">
 
-    <div class="main-wrapper">
-        <div class="topic-container" style="position: relative;">
+    </video>
+
+    <div id="main-wrapper">
+
+        <!-- <section style="padding-top:var(--headerH);">
+            Welcome to my portfolio!
+            
+        </section> -->
+        <div id="projects" class="topic-container hidden" style="position: relative;">
             <h1 class="topic-header">Projects</h2>
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="details">
-                                <section>
-                                    <h3>Mobile Auction Application</h3>
-                                    <p class="light techs">Flutter (Dart language), Backendless BaaS</p>
-                                </section>
-                                <section>
-                                    <video autoplay loop muted src="supplies/vids/zoodha.mp4"></video>
-                                    <div class="more">
-                                        <section class="radios">
-                                            <input type="radio" checked name="radp0" id="rad0">
-                                            <label for="rad0">
-                                                <p class="tab-nail">About</p>
-                                            </label>
-                                            <input type="radio" name="radp0" id="rad1">
-                                            <label for="rad1">
-                                                <p class="tab-nail">Features</p>
-                                            </label>
-                                            <input type="radio" name="radp0" id="rad2">
-                                            <label for="rad2">
-                                                <p class="tab-nail">Challanges</p>
-                                            </label>
-                                        </section>
-                                        <section class="tab-content">
-                                            c0 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio dolor
-                                            nemo
-                                            quam quod
-                                            dolore
-                                            blanditiis maiores veritatis, autem minus adipisci ad placeat repellendus
-                                            iure
-                                            soluta
-                                            nostrum aperiam consequuntur quia hic.
-                                            c0 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio dolor
-                                            nemo
-                                            quam quod
-                                            dolore
-                                            blanditiis maiores veritatis, autem minus adipisci ad placeat repellendus
-                                            iure
-                                            soluta
-                                            nostrum aperiam consequuntur quia hic.
-                                            c0 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio dolor
-                                            nemo
-                                            quam quod
-                                            dolore
-                                            blanditiis maiores veritatis, autem minus adipisci ad placeat repellendus
-                                            iure
-                                            soluta
-                                            nostrum aperiam consequuntur quia hic.
-                                        </section>
-                                        <section class="tab-content">
-                                            c1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio dolor
-                                            nemo
-                                            quam quod
-                                            dolore
-                                            blanditiis maiores veritatis, autem minus adipisci ad placeat repellendus
-                                            iure
-                                            soluta
-                                            nostrum aperiam consequuntur quia hic.
-                                        </section>
-                                        <section class="tab-content">
-                                            c2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio dolor
-                                            nemo
-                                            quam quod
-                                            dolore
-                                            blanditiis maiores veritatis, autem minus adipisci ad placeat repellendus
-                                            iure
-                                            soluta
-                                            nostrum aperiam consequuntur quia hic.
-                                        </section>
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="details">
-                                <section>
-                                    <h3>Pets shop</h3>
-                                    <p class="light techs">HTML/CSS, js, PHP</p>
-                                </section>
-                                <section>
-                                    <video autoplay loop muted src="supplies/vids/pety rep.mp4"></video>
-                                    <div class="more">
-                                        <section class="radios">
-                                            <input type="radio" checked name="radp0" id="rad0">
-                                            <label for="rad0">
-                                                <p class="tab-nail">About</p>
-                                            </label>
-                                            <input type="radio" name="radp0" id="rad1">
-                                            <label for="rad1">
-                                                <p class="tab-nail">Features</p>
-                                            </label>
-                                            <input type="radio" name="radp0" id="rad2">
-                                            <label for="rad2">
-                                                <p class="tab-nail">Challanges</p>
-                                            </label>
-                                            <label for="rad0">
-                                                <p class="tab-nail"><a href="ds.com">Demo</a></p>
-                                            </label>
-                                        </section>
-                                        <section class="tab-content">
-                                            c0 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio dolor
-                                            nemo
-                                            quam quod
-                                            dolore
-                                            blanditiis maiores veritatis, autem minus adipisci ad placeat repellendus
-                                            iure
-                                            soluta
-                                            nostrum aperiam consequuntur quia hic.
-                                        </section>
-                                        <section class="tab-content">
-                                            c1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio dolor
-                                            nemo
-                                            quam quod
-                                            dolore
-                                            blanditiis maiores veritatis, autem minus adipisci ad placeat repellendus
-                                            iure
-                                            soluta
-                                            nostrum aperiam consequuntur quia hic.
-                                        </section>
-                                        <section class="tab-content">
-                                            c2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio dolor
-                                            nemo
-                                            quam quod
-                                            dolore
-                                            blanditiis maiores veritatis, autem minus adipisci ad placeat repellendus
-                                            iure
-                                            soluta
-                                            nostrum aperiam consequuntur quia hic.
-                                        </section>
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="details">
-                                <section>
-                                    <h3>Mobile Auction Application</h3>
-                                    <p class="light techs">Flutter (Dart language), Backendless BaaS</p>
-                                </section>
-                                <section>
-                                    <video autoplay loop muted src="supplies/vids/zoodha.mp4"></video>
-                                    <div class="more">
-                                        <section class="radios">
-                                            <input type="radio" checked name="radp0" id="rad0">
-                                            <label for="rad0">
-                                                <p class="tab-nail">About</p>
-                                            </label>
-                                            <input type="radio" name="radp0" id="rad1">
-                                            <label for="rad1">
-                                                <p class="tab-nail">Features</p>
-                                            </label>
-                                            <input type="radio" name="radp0" id="rad2">
-                                            <label for="rad2">
-                                                <p class="tab-nail">Challanges</p>
-                                            </label>
-                                        </section>
-                                        <section class="tab-content">
-                                            c0 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio dolor
-                                            nemo
-                                            quam quod
-                                            dolore
-                                            blanditiis maiores veritatis, autem minus adipisci ad placeat repellendus
-                                            iure
-                                            soluta
-                                            nostrum aperiam consequuntur quia hic.
-                                        </section>
-                                        <section class="tab-content">
-                                            c1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio dolor
-                                            nemo
-                                            quam quod
-                                            dolore
-                                            blanditiis maiores veritatis, autem minus adipisci ad placeat repellendus
-                                            iure
-                                            soluta
-                                            nostrum aperiam consequuntur quia hic.
-                                        </section>
-                                        <section class="tab-content">
-                                            c2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio dolor
-                                            nemo
-                                            quam quod
-                                            dolore
-                                            blanditiis maiores veritatis, autem minus adipisci ad placeat repellendus
-                                            iure
-                                            soluta
-                                            nostrum aperiam consequuntur quia hic.
-                                        </section>
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
+
                         <!-- Add more slides as needed -->
                     </div>
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
         </div>
-        <div class="topic-container centered-flex col-flex">
+        <div id="skills" class="topic-container hidden centered-flex col-flex">
             <h1 class="topic-header">Skills</h1>
             <div class="details width8">
                 <ul class="points-list">
@@ -440,29 +293,64 @@
                 </ul>
             </div>
         </div>
-        <div class="topic-container">
+        <div id="education" class="topic-container hidden col-flex centered-flex">
             <h1 class="topic-header">
                 Eduaction
             </h1>
-            <center>
-                <div id="education" class="card centered-flex">
-                    <img src="supplies/img/iau.jpg">
-                    <div class="col-flex">
-                        <section>
-                            <span>Bachelor in </span>
-                            <h3>
-                                Computer Science 2023
-                            </h3>
-                        </section>
-                        <p>GPA: <strong>4.6</strong></p>
-                        <p>Second class honors</p>
-                        </ul>
-                    </div>
-            </center>
+
+            <div class="card centered-flex ">
+                <img src="supplies/img/iau.jpg">
+                <div class="col-flex centered-flex">
+                    <section class="centered-flex col-flex">
+                        <span>Bachelor in </span>
+                        <h3>
+                            Computer Science 2023
+                        </h3>
+                    </section>
+                    <p>GPA: <strong>4.6</strong></p>
+                    <p>Second class honors</p>
+                    </ul>
+                </div>
+
+            </div>
+
         </div>
+        <div id="achievements" class="topic-container hidden col-flex centered-flex">
+
+            <h1 class="topic-header">
+                Achievements
+            </h1>
+            <div class="col-flex centered-flex card">
+                <p class="centered-flex">Ranked second among my colleagues in Computer Science program Ref.</p>
+                <p>Secured first place in a competitive programming contest organized by college programming club
+                    Ref.
+                </p>
+                <p>Ranked 3rd in SQL tournament organized by IAU MIS Committee Ref.</p>
+
+            </div>
+        </div>
+        <!-- <div id="intro">
+            <h1 class="centered-flex">Welcome <span class="material-symbols-outlined">
+                    waving_hand
+                </span></h1>
+            <section id="brief" class="centered-flex col-flex">
+                <h2 id="name" class="centered-flex"><span class="material-symbols-outlined">
+                        person
+                    </span> Anas Eshtaiwi
+                </h2>
+                <p class="centered-flex">
+                    Fresh computer science graduate, passionate coder and looking for a job in software
+                    development.
+                    with experience in developing web, and mobile apps
+                </p>
+            </section>
+        </div> -->
     </div>
+
 </body>
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-<script src="main.js"></script>
+<script src="supplies/js/functions.js"></script>
+<script src="supplies/js/main.js"></script>
+<script src="supplies/js/projects.js"></script>
 
 </html>
