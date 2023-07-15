@@ -95,7 +95,7 @@ function modifyForSamDark() {
 
 }
 function onInit() {
-    modifyForSamDark()
+    // modifyForSamDark()
     handleNav()
     updateTopPadding()
 }
