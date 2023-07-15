@@ -85,17 +85,17 @@ function toggleIntro(byUser = false) {
 
 }
 function modifyForSamDark() {
-    // if (!(navigator.userAgent.toLowerCase().includes('samsungbrowser')))
-    //     return
-    document.getElementById("holder").innerHTML += `<p>${matchMedia('(prefers-color-scheme: dark)').matches}</p>`
-    document.getElementById("holder").innerHTML += `<p>${navigator.userAgent.toLowerCase().includes('samsungbrowser')}</p>`
-    document.querySelector(':root').style.setProperty("--brown", `#f9c77c`)
-    document.querySelector(':root').style.setProperty("--lightBlack", `#00000036`)
+    if (!navigator.userAgent.toLowerCase().includes('samsungbrowser'))
+        return
+    // document.getElementById("holder").innerHTML += `<p>${matchMedia('(prefers-color-scheme: dark)').matches}</p>`
+    // document.getElementById("holder").innerHTML += `<p>${navigator.userAgent.toLowerCase().includes('samsungbrowser')}</p>`
+    // document.querySelector(':root').style.setProperty("--brown", `#f9c77c`)
+    // document.querySelector(':root').style.setProperty("--lightBlack", `#00000036`)
     bg.style.filter = 'brightness(.85)'
 
 }
 function onInit() {
-    // modifyForSamDark()
+    modifyForSamDark()
     handleNav()
     updateTopPadding()
 }
