@@ -57,4 +57,4 @@ async function getProjects() {
 
 }
 
-getProjects()
+// getProjects()

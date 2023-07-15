@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="supplies/styling/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <meta name="color-scheme" content="light dark">
+    <meta name="color-scheme" content="light">
     <title>Anas Eshtaiwi Portfolio</title>
 
 </head>
@@ -40,7 +40,8 @@
                         with experience in developing web, and mobile apps
                     </p>
             </div>
-            <ul>
+            <div id="holder"></div>
+            <ul class="burger-collabsed">
                 <li>
                     <input data-content="projects" checked type="radio" id="proj-radio" name="section-rad">
                     <label for="proj-radio">
@@ -67,6 +68,13 @@
                     <label for="ach-radio">
                         <span class="material-symbols-outlined">trophy</span>
                         Achievements
+                    </label>
+                </li>
+                <li>
+                    <input data-content="contact" type="radio" id="con-radio" name="section-rad">
+                    <label for="con-radio">
+                        <span class="material-symbols-outlined">call</span>
+                        Contact
                     </label>
                 </li>
             </ul>

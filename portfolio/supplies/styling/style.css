@@ -47,7 +47,7 @@ body {
     z-index: -100;
 }
 
-@media (prefers-color-scheme: dark),
+/* @media (prefers-color-scheme: dark),
 (prefers-color-scheme: dark) {
     :root {
         --hcolor: #f0f8ff !important;
@@ -61,7 +61,7 @@ body {
         --brown: #a52a2a !important;
         --intoduceIn: .9s
     }
-}
+} */
 
 input[type=radio] {
     display: none;
@@ -409,7 +409,7 @@ video {
     margin-right: 1px;
     cursor: pointer;
     color: var(--c2);
-
+    text-transform: capitalize;
     border-right: 1px solid var(--lightBlack);
 
 }
@@ -447,6 +447,7 @@ input[type=radio]:checked+label p.tab-nail {
     /* max-height: 34vh; */
     width: 100%;
     overflow-y: auto;
+    text-transform: capitalize;
     color: var(--black) !important;
 }
 
@@ -680,6 +681,8 @@ video:fullscreen {
     cursor: auto;
 }
 
+
+
 @media (max-width: 1040px) {
     div.details section:nth-child(2) {
         grid-template-columns: auto;
@@ -694,20 +697,54 @@ video:fullscreen {
     .vertical-divider {
         display: none;
     }
+
+    .nav-bar ul.burger-expanded>li {
+        transform: scaleX(1) !important;
+    }
 }
 
-@media (max-width: 760px) {
-    .nav-bar {
+@media (max-width: 925px) {
+    ul.burger-collabsed {
         flex-direction: column;
-        gap: 20px;
+        gap: 3px;
     }
+
+    ul.burger-collabsed li {
+        display: block;
+        width: 35px;
+        height: 4px;
+        background: var(--black);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    ul.burger-expanded {
+        gap: 0;
+    }
+
+    ul.burger-expanded li {
+        width: initial;
+        height: initial;
+        background: transparent;
+        /* border-bottom: 1px solid var(--lightBlack); */
+        /* padding-bottom: 3px; */
+        border-radius: 2px;
+        box-shadow: var(--lightBlack) 0 0 8px 0;
+    }
+
+    .nav-bar {
+        padding: 7px 5%;
+        justify-content: space-between;
+    }
+
 }
 
 @media (max-width: 600px) {
-    .nav-bar ul {
+    /* .nav-bar ul {
         flex-wrap: wrap;
         justify-content: space-evenly;
-    }
+        justify-content: space-evenly;
+    } */
 
     #education>div div {
 

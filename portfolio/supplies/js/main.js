@@ -34,26 +34,12 @@ let mySwiper = new Swiper('.swiper-container', {
     },
 });
 
-let sections = new Map([])
+
 const visibilityThresh = innerHeight > 760 ? .7 : innerHeight > 520 ? .2 : .05;
 const intro = document.getElementById("intro")
 
 
-let navRads = document.querySelectorAll('input[name=section-rad]');
 
-const kvRads = new Map(Array.from(navRads).map((e) => [e.getAttribute('data-content'), e]))
-const focusClass = 'gained-focus'
-
-function updateTopPadding() {
-    document.querySelector(':root').style.setProperty("--headerH", `${document.body.querySelector('header').clientHeight + 10}px `)
-}
-function checkNavRad(name) {
-    kvRads.get(name).checked = true
-}
-function changeHeaderFocus(topicContainer, focus) {
-
-    topicContainer.querySelector(".topic-header").classList.toggle(focusClass, focus);
-}
 function startObserving() {
 
 
@@ -98,23 +84,14 @@ function toggleIntro(byUser = false) {
     intro.setAttribute("id", newId);
 
 }
-
-window.addEventListener("load", () => {
+function onInit() {
     updateTopPadding()
+    handleNav()
+}
+window.addEventListener("load", () => {
 
-    navRads.forEach((rad) => {
-        const label = rad.getAttribute('data-content');
-
-        if (!sections.has(label))
-            sections.set(label, document.getElementById(label))
-        rad.addEventListener('change', (e) => {
-            if (!e.target.checked)
-                return;
-            sections.get(label).scrollIntoView({ behavior: "smooth", block: "start", inline: "center" });
-        });
-
-    })
-    onresize = updateTopPadding
+    onInit()
+    onresize = onInit
     startObserving()
 
     setTimeout(() => {
