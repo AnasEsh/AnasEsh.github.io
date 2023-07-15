@@ -85,9 +85,9 @@ function toggleIntro(byUser = false) {
 
 }
 function modifyForSamDark() {
-    if (!(matchMedia('(prefers-color-scheme: dark)').matches && navigator.userAgent.toLowerCase().includes('samsungbrowser')))
+    if (!(navigator.userAgent.toLowerCase().includes('samsungbrowser')))
         return
-    // document.body.querySelector("header").innerHTML = "DETeeeeeeeeeeeeeev ved"
+    document.body.getElementById("holder").innerHTML = "DETeeeeeeeeeeeeeev ved"
     document.querySelector(':root').style.setProperty("--brown", `ff9900`)
     bg.style.filter = 'brightness(.85)'
 
