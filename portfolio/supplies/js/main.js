@@ -89,7 +89,7 @@ function onInit() {
     updateTopPadding()
 }
 window.addEventListener("load", () => {
-    const pre = document.querySelector("pre")
+    const pre = document.getElementById("tests")
     pre.innerHTML += window.matchMedia('(prefers-color-scheme: dark)').matches + navigator.userAgent
     onInit()
     onresize = onInit
