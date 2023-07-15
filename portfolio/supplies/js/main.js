@@ -84,13 +84,20 @@ function toggleIntro(byUser = false) {
     intro.setAttribute("id", newId);
 
 }
+function modifyForSamDark() {
+    if (!(matchMedia('(prefers-color-scheme: dark)').matches && navigator.userAgent.toLowerCase().includes('samsungbrowser')))
+        return
+    document.querySelector(':root').style.setProperty("--brown", `ff9900`)
+    bg.style.filter = 'brightness(.85)'
+
+}
 function onInit() {
     handleNav()
     updateTopPadding()
+    modifyForSamDark()
 }
 window.addEventListener("load", () => {
-    const pre = document.getElementById("tests")
-    pre.innerHTML += window.matchMedia('(prefers-color-scheme: dark)').matches + navigator.userAgent
+
     onInit()
     onresize = onInit
     startObserving()
@@ -98,7 +105,7 @@ window.addEventListener("load", () => {
     setTimeout(() => {
         toggleIntro()
         intro.onclick = toggleIntro
-        const bg = document.getElementById("bg-video")
+
         bg.playbackRate = .45
         bg.addEventListener("end", () => {
             bg.currentTime = 0;

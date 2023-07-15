@@ -1,5 +1,5 @@
 
-
+const bg = document.getElementById("bg-video")
 const toggle = (e, show) => { e.style.display = show ? 'block' : ""; }
 function linkNailsToTabs() {
     const moreRads = document.querySelectorAll('.radios');
