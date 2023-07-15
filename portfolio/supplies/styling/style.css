@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0");
 
-.material-symbols-outlined {
-    color: inherit !important;
-}
+
 
 
 :root {
@@ -132,7 +130,7 @@ header {
 }
 
 .nav-bar * {
-    color: black;
+    color: var(--black) !important;
 }
 
 #pname span {
@@ -288,6 +286,7 @@ header {
     align-items: center;
     font-family: sans-serif;
     letter-spacing: .8px;
+    color: var(--black) !important;
 }
 
 
@@ -305,7 +304,7 @@ header {
 
 .nav-bar ul li input[type=radio]:checked+label,
 .nav-bar ul li input[type=radio]:checked+label span {
-    color: var(--fcsColor);
+    color: var(--fcsColor) !important;
     transform: scale(1.1);
 }
 
@@ -337,7 +336,7 @@ header {
     padding: 10px;
     max-height: 100%;
     overflow: hidden;
-
+    width: 100%;
 }
 
 /* #projects {
@@ -347,14 +346,15 @@ header {
 div.details section h3 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
+    color: var(--black) !important;
 }
 
 p.light.techs {
     margin: 5px;
     font-style: italic;
-    color: var(--c2);
+    color: var(--c2) !important;
     display: flex;
-    align-items: center;
+    align-items: start;
     align-content: center;
     gap: 5px;
 }
@@ -447,6 +447,7 @@ input[type=radio]:checked+label p.tab-nail {
     /* max-height: 34vh; */
     width: 100%;
     overflow-y: auto;
+    color: var(--black) !important;
 }
 
 .tab-content ul {
@@ -591,6 +592,7 @@ ul.skills-list li:hover svg {
     display: flex;
     justify-content: space-evenly;
     gap: 20px;
+    color: var(--black) !important;
 }
 
 ::-webkit-scrollbar {
@@ -623,6 +625,7 @@ ul.skills-list li:hover svg {
 div#achievements p {
     font-size: large;
     padding: 20px 5px;
+    color: var(--black) !important;
 }
 
 div#achievements p:not(:last-of-type) {
@@ -710,6 +713,10 @@ video:fullscreen {
 
         text-align: center;
     }
+
+    ul.skills-list li svg {
+        width: 60px;
+    }
 }
 
 @media (max-width:450px) {
@@ -717,6 +724,10 @@ video:fullscreen {
         margin: 0 0 15px 0;
 
         font-size: .7rem;
+    }
+
+    #pname {
+        font-size: 1.5rem;
     }
 
     div#achievements p {
@@ -733,4 +744,12 @@ video:fullscreen {
         text-align: center;
         font-size: .85rem;
     }
+
+    p.light.techs {
+        font-size: .9rem;
+    }
+}
+
+.material-symbols-outlined {
+    color: inherit !important;
 }
