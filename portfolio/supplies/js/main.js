@@ -85,8 +85,8 @@ function toggleIntro(byUser = false) {
 
 }
 function onInit() {
-    updateTopPadding()
     handleNav()
+    updateTopPadding()
 }
 window.addEventListener("load", () => {
     const pre = document.querySelector("pre")
