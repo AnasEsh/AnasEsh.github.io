@@ -571,7 +571,7 @@ ul.skills-list li:hover svg {
 }
 
 .card {
-    box-shadow: black 0 0 15px 0;
+    box-shadow: var(--black) 0 0 15px 0;
     border-radius: 12px;
     overflow: hidden;
     margin: 25px 10px;

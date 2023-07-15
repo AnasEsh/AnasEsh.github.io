@@ -89,7 +89,8 @@ function onInit() {
     handleNav()
 }
 window.addEventListener("load", () => {
-
+    const pre = document.querySelector("pre")
+    pre.innerHTML += window.matchMedia('(prefers-color-scheme: dark)').matches + navigator.userAgent
     onInit()
     onresize = onInit
     startObserving()
