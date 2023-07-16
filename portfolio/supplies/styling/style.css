@@ -47,7 +47,7 @@ body {
     z-index: -100;
 }
 
-/* @media (prefers-color-scheme: dark),
+@media (prefers-color-scheme: dark),
 (prefers-color-scheme: dark) {
     :root {
         --hcolor: #f0f8ff !important;
@@ -58,10 +58,10 @@ body {
         --black: #000 !important;
         scroll-behavior: smooth;
         --fcsColor: #f0f8ff !important;
-        --brown: #a52a2a !important;
+        --brown: green !important;
         --intoduceIn: .9s
     }
-} */
+}
 
 input[type=radio] {
     display: none;
