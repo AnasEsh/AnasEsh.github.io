@@ -47,8 +47,7 @@ body {
     z-index: -100;
 }
 
-@media (prefers-color-scheme: dark),
-(prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
     :root {
         --hcolor: #f0f8ff !important;
         --lightBlack: rgba(0, 0, 0, 0.123) !important;
