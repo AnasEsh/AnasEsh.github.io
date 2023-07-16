@@ -47,8 +47,10 @@ function checkNavRad(name) {
         return
     }
     kvRads.forEach((rad) => {
-        if (rad.getAttribute("data-content") == name)
-            rad.parentElement.style.transform = "scaleX(1.1)";
+        if (rad.getAttribute("data-content") == name) {
+            rad.parentElement.style.transform = "scaleX(1.3)";
+            rad.checked = true
+        }
         else
             rad.parentElement.style.transform = ''
     })

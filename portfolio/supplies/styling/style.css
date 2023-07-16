@@ -716,6 +716,12 @@ video:fullscreen {
         background: var(--black);
         border-radius: 8px;
         overflow: hidden;
+
+    }
+
+    ul.burger-collabsed:not(.burger-expanded) li input:checked+label,
+    ul.burger-collabsed:not(.burger-expanded) li input:checked+label>span {
+        color: var(--black) !important;
     }
 
     ul.burger-expanded {

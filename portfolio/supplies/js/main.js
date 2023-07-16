@@ -95,7 +95,7 @@ function modifyForSamDark() {
 
 }
 function onInit() {
-    modifyForSamDark()
+    // modifyForSamDark()
     handleNav()
     updateTopPadding()
 }
@@ -106,6 +106,7 @@ window.addEventListener("load", () => {
     startObserving()
 
     setTimeout(() => {
+        document.getElementById("holder").innerHTML = `<p>DM: ${window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches}</p><p>Sam: ${navigator.userAgent.toLowerCase().includes('samsungbrowser')}</p>`;
         toggleIntro()
         intro.onclick = toggleIntro
 
