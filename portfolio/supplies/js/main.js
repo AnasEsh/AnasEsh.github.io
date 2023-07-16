@@ -90,7 +90,7 @@ function modifyForSamDark() {
         return
     // document.getElementById("holder").innerHTML += `<p>${matchMedia('(prefers-color-scheme: dark)').matches}</p>`
     // document.getElementById("holder").innerHTML += `<p>${navigator.userAgent.toLowerCase().includes('samsungbrowser')}</p>`
-    document.querySelector(':root').style.setProperty("--brown", `#000`)
+    document.querySelector(':root').style.setProperty("--brown", `#000 !important`)
     // document.querySelector(':root').style.setProperty("--lightBlack", `#00000036`)
     bg.style.filter = 'brightness(.85)'
 
