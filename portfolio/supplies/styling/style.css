@@ -47,7 +47,7 @@ body {
     z-index: -100;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     :root {
         --hcolor: #f0f8ff !important;
         --lightBlack: rgba(0, 0, 0, 0.123) !important;
@@ -60,10 +60,15 @@ body {
         --brown: green !important;
         --intoduceIn: .9s
     }
-}
+} */
 
 input[type=radio] {
     display: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 #main-wrapper {
@@ -204,12 +209,12 @@ header {
         transform: rotate(0deg) scale(0);
     }
 
-    35% {
-        transform: rotate(-35deg);
+    40% {
+        transform: rotate(-40deg);
     }
 
-    70% {
-        transform: rotate(15deg);
+    75% {
+        transform: rotate(5deg);
     }
 
     100% {
@@ -617,7 +622,6 @@ ul.skills-list li:hover svg {
 #achievements {
 
     border-radius: 3px;
-    padding: 10px;
     gap: 20px;
 
 }
@@ -681,6 +685,45 @@ video:fullscreen {
 }
 
 
+#contact>section>div:last-of-type a svg {
+    max-width: 100%;
+    aspect-ratio: 1/1;
+    image-rendering: crisp-edges;
+}
+
+#contact>section>div:last-of-type a:hover {
+    transform: scale(1.06);
+    transition-delay: .1s;
+}
+
+#contact>section>div:last-of-type>a {
+    max-width: 50px;
+    max-height: 50px;
+    display: flex;
+}
+
+#contact>section {
+    gap: 30px;
+    color: var(--black);
+}
+
+#contact>section p {
+    gap: 6px;
+
+}
+
+#contact>section>div:last-child {
+    width: 100%;
+}
+
+#contact>section>div {
+    gap: 45px;
+    flex-wrap: wrap;
+}
+
+#contact {
+    gap: 30px;
+}
 
 @media (max-width: 1040px) {
     div.details section:nth-child(2) {
@@ -728,6 +771,7 @@ video:fullscreen {
     }
 
     ul.burger-expanded li {
+
         width: initial;
         height: initial;
         background: transparent;
