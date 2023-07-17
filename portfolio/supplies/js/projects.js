@@ -47,9 +47,9 @@ async function getProjects() {
     let projects = await fetch("https://dl.dropboxusercontent.com/scl/fi/2mt9kmreczph9uuccsx9n/portfolio.json?rlkey=q1s63fg6dn15u9rl5dec6rvhs&dl=0")
 
     projects = (await projects.json())['projects']
-
     const slides = projects.map((projectJson) => composeSlide(projectJson))
-    mySwiper.addSlide(0, slides)
+
+    mySwiper.appendSlide(slides)
     linkNailsToTabs()
     setTimeout(() => {
         mySwiper.slideTo(1)

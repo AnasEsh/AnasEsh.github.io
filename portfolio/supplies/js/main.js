@@ -35,7 +35,7 @@ let mySwiper = new Swiper('.swiper-container', {
 });
 
 
-const visibilityThresh = innerHeight > 760 ? .7 : innerHeight > 520 ? .2 : .05;
+const visibilityThresh = innerHeight > 760 ? .5 : innerHeight > 520 ? .1 : .05;
 const intro = document.getElementById("intro")
 
 
@@ -85,12 +85,12 @@ function toggleIntro(byUser = false) {
 
 }
 function modifyForSamDark() {
-    document.getElementById("holder").innerHTML = `<p>DM: ${window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches}</p><p>Sam: ${navigator.userAgent.toLowerCase().includes('samsungbrowser')}</p>`;
+    // document.getElementById("holder").innerHTML = `<p>DM: ${window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches}</p><p>Sam: ${navigator.userAgent.toLowerCase().includes('samsungbrowser')}</p>`;
     if (!navigator.userAgent.includes('samsungbrowser'))
         return
     // document.getElementById("holder").innerHTML += `<p>${matchMedia('(prefers-color-scheme: dark)').matches}</p>`
     // document.getElementById("holder").innerHTML += `<p>${navigator.userAgent.toLowerCase().includes('samsungbrowser')}</p>`
-    document.querySelector(':root').style.setProperty("--brown", `#000 !important`)
+    document.querySelector(':root').style.setProperty("--brown", `#000`)
     // document.querySelector(':root').style.setProperty("--lightBlack", `#00000036`)
     bg.style.filter = 'brightness(.85)'
 

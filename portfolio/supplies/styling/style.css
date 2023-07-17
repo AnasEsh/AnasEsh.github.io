@@ -788,6 +788,14 @@ video:fullscreen {
 
 }
 
+@media (min-width: 926px) {
+
+    .nav-bar ul.burger-expanded>li,
+    .nav-bar ul.burger-collabsed>li {
+        transform: scaleX(1) !important;
+    }
+}
+
 @media (max-width: 600px) {
     /* .nav-bar ul {
         flex-wrap: wrap;
