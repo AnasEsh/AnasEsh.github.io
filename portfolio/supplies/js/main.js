@@ -89,15 +89,20 @@ function modifyForSamDark() {
     
     if (!navigator.userAgent.includes('samsungbrowser'))
         return
+
     // document.getElementById("holder").innerHTML += `<p>${matchMedia('(prefers-color-scheme: dark)').matches}</p>`
     // document.getElementById("holder").innerHTML += `<p>${navigator.userAgent.toLowerCase().includes('samsungbrowser')}</p>`
-    document.querySelector(':root').style.setProperty("--brown", `#000`)
+
     // document.querySelector(':root').style.setProperty("--lightBlack", `#00000036`)
     bg.style.filter = 'brightness(.85)'
-
+    const samcss=document.createElement("link")
+    samcss.setAttribute("rel", "stylesheet")
+    samcss.setAttribute("type", "text/css")
+    samcss.setAttribute("href", "supplies/styling/sam-colors.css")
+    document.head.appendChild(samcss)
 }
 function onInit() {
-    modifyForSamDark()
+    // modifyForSamDark()
     handleNav()
     updateTopPadding()
 }
@@ -117,6 +122,7 @@ window.addEventListener("load", () => {
             bg.currentTime = 0;
             bg.play()
         })
+    modifyForSamDark()
     }, 6500)
 
 })

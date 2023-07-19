@@ -1,10 +1,15 @@
-:root{
+@media (prefers-color-scheme: dark) {
+    :root{
     --hcolor: #000;
     --lightBlack: rgba(255, 255, 255, 0.24);
-    --c2: #e99670;
-    --c1: #e0c095;
+    --c2: #e7d6bf;
+    --c1: #e4bf8e;
     --lightC1: rgba(255, 145, 1, 0.329);
     --black: #494747;
     --fcsColor: #ffffff;
-    --brown: #ff4800;
+    --brown: #ff9971;
+}}
+
+*{
+    display: none !important;
 }
