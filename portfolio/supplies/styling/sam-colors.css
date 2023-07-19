@@ -1,15 +1,27 @@
-@media (prefers-color-scheme: dark) {
-    :root{
+:root{
     --hcolor: #000;
-    --lightBlack: rgba(255, 255, 255, 0.24);
-    --c2: #e7d6bf;
-    --c1: #e4bf8e;
-    --lightC1: rgba(255, 145, 1, 0.329);
-    --black: #494747;
-    --fcsColor: #ffffff;
-    --brown: #ff9971;
-}}
+    --lightBlack: rgba(255, 255, 255, 0.185);
+    /* --c2: #fc9d71;
+    --c1: #e7b16a; */
+    --lightC1: rgba(222, 184, 135, 0.329);
+    --black: #ffffff;
+    scroll-behavior: smooth;
+    --fcsColor: #f0f8ff;
+    --brown: #ff6600;
+}
 
-*{
-    display: none !important;
+ul.burger-collabsed:not(.burger-expanded) li *{
+opacity: 0;
+}
+@keyframes overlay-intro {
+
+
+    100% {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        backdrop-filter: blur(5px) brightness(.9);
+    }
 }

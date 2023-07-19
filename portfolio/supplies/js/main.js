@@ -84,14 +84,9 @@ function toggleIntro(byUser = false) {
     intro.setAttribute("id", newId);
 
 }
-let tp=0
+
 function modifyForSamDark() {
-    document.getElementById("holder").innerHTML = `<p>LM: ${window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches}</p><p>DM: ${window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches}</p><p>Sam: ${navigator.userAgent.toLowerCase().includes('samsungbrowser')}</p>`;
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-        
-        modifyForSamDark()
-        document.getElementById("holder").innerHTML+=`<p>tp ${tp}</p>`
-    })
+
     if (!navigator.userAgent.includes('samsungbrowser'))
         return
 
@@ -99,7 +94,7 @@ function modifyForSamDark() {
     // document.getElementById("holder").innerHTML += `<p>${navigator.userAgent.toLowerCase().includes('samsungbrowser')}</p>`
 
     // document.querySelector(':root').style.setProperty("--lightBlack", `#00000036`)
-    bg.style.filter = 'brightness(.85)'
+    bg.style.filter = 'brightness(.80)'
     const samcss=document.createElement("link")
     samcss.setAttribute("rel", "stylesheet")
     samcss.setAttribute("type", "text/css")
@@ -107,7 +102,7 @@ function modifyForSamDark() {
     document.head.appendChild(samcss)
 }
 function onInit() {
-    // modifyForSamDark()
+    modifyForSamDark()
     handleNav()
     updateTopPadding()
 }
@@ -127,7 +122,6 @@ window.addEventListener("load", () => {
             bg.currentTime = 0;
             bg.play()
         })
-    modifyForSamDark()
     }, 6500)
 
 })
