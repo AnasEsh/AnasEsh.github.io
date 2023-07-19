@@ -84,9 +84,14 @@ function toggleIntro(byUser = false) {
     intro.setAttribute("id", newId);
 
 }
+let tp=0
 function modifyForSamDark() {
-    document.getElementById("holder").innerHTML = `<p>NPR: ${window.matchMedia && window.matchMedia('(prefers-color-scheme: no-preference)').matches}</p><p>LM: ${window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches}</p><p>DM: ${window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches}</p><p>Sam: ${navigator.userAgent.toLowerCase().includes('samsungbrowser')}</p>`;
-    
+    document.getElementById("holder").innerHTML = `<p>LM: ${window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches}</p><p>DM: ${window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches}</p><p>Sam: ${navigator.userAgent.toLowerCase().includes('samsungbrowser')}</p>`;
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+        
+        modifyForSamDark()
+        document.getElementById("holder").innerHTML+=`<p>tp ${tp}</p>`
+    })
     if (!navigator.userAgent.includes('samsungbrowser'))
         return
 
