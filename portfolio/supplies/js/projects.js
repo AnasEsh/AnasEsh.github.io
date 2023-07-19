@@ -1,13 +1,13 @@
 const radGroupName = 'moreRads'
 let pCount = 0
-const template = '<div class="details"><section><h3 data-helper="type"><span data-helper="name"></span> </h3><p class="light techs" data-helper="techs"></p></section><section><video autoplay loop muted></video><div class="more"><section class="radios"></section></div></section></div>'
+const template = '<div class="details"><section><h3 data-helper="type"><span data-helper="name"></span> </h3><p class="light techs" data-helper="techs"></p></section><video autoplay loop muted></video><section class="radios"></section></div>'
 
 
 function composeSlide(json) {
     const slide = createHElement('div', null, ['swiper-slide'], template.toString())
 
-    const more = slide.querySelector(".more")
-    const rads = more.querySelector(".radios")
+    const details = slide.querySelector(".details")
+    const rads = details.querySelector(".radios")
 
     for (let tab in json['more']) {
         const tabContent = json['more'][tab]
@@ -17,7 +17,7 @@ function composeSlide(json) {
         const tabContainer = createHElement("section", null, ['tab-content'])
         rads.appendChild(rad)
         rads.appendChild(label)
-        more.appendChild(tabContainer)
+        details.appendChild(tabContainer)
         if (Array.isArray(tabContent)) {
             const ul = document.createElement("ul")
             tabContent.forEach((point) => { ul.appendChild(createHElement('li', null, [], point)) })
@@ -39,6 +39,9 @@ function composeSlide(json) {
             continue
         el.innerHTML += json[k]
     }
+    if(json.cont)
+        rads.nextElementSibling.innerHTML=`<center><div class="contri"><h5>My Contribution:</h5><span>back-end: ${json.cont.b}</span><span>front-end: ${json.cont.f}</span></div></center>`+rads.nextElementSibling.innerHTML;
+
     pCount++
     return slide
 }
