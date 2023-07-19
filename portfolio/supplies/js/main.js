@@ -85,7 +85,8 @@ function toggleIntro(byUser = false) {
 
 }
 function modifyForSamDark() {
-    // document.getElementById("holder").innerHTML = `<p>DM: ${window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches}</p><p>Sam: ${navigator.userAgent.toLowerCase().includes('samsungbrowser')}</p>`;
+    document.getElementById("holder").innerHTML = `<p>NPR: ${window.matchMedia && window.matchMedia('(prefers-color-scheme: no-preference)').matches}</p><p>LM: ${window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches}</p><p>DM: ${window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches}</p><p>Sam: ${navigator.userAgent.toLowerCase().includes('samsungbrowser')}</p>`;
+    
     if (!navigator.userAgent.includes('samsungbrowser'))
         return
     // document.getElementById("holder").innerHTML += `<p>${matchMedia('(prefers-color-scheme: dark)').matches}</p>`
