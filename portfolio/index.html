@@ -1,534 +1,304 @@
-<!DOCTYPE html>
-<html lang="en">
-
-
+<!doctype html>
+<html lang=en>
 <head>
-
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="supplies/styling/swiper.css">
-    <link rel="stylesheet" href="supplies/styling/style.css">
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <meta name="color-scheme" content="light dark">
-    <title>Anas Eshtaiwi Portfolio</title>
-
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel=stylesheet>
+<link rel=stylesheet href=supplies/styling/swiper.css>
+<link rel=stylesheet href=supplies/styling/style.css>
+<meta charset=UTF-8>
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<meta name=color-scheme content="light dark">
+<title>Anas Eshtaiwi Portfolio</title>
 </head>
-
 <body>
-    <!-- <h2 style="color: red; position: fixed; left: 50%;top: 5%;z-index: 10; transform: translateX(-50%);">*This site
-        still under
-        development</h2> -->
-    <header>
-        <nav class="nav-bar">
-            <div id="intro">
-                <section>
-                    <div id="name" class="centered-flex">
-                        <span class="material-symbols-outlined">
-                            person
-                        </span> Anas Eshtaiwi
-                    </div>
-                    <div id="cc"><span></span><span></span><span></span></div>
-                </section>
-                <h1 class="centered-flex">Welcome <span class="material-symbols-outlined">
-                        waving_hand
-                    </span></h1>
-                <section id="brief" class="centered-flex col-flex">
-                    <h2 id="name" class="centered-flex"><span class="material-symbols-outlined">
-                            person
-                        </span> Anas Eshtaiwi
-                    </h2>
-                    <p class="centered-flex">
-                        Fresh computer science graduate, passionate coder and looking for a job in software
-                        development.
-                        with experience in developing web, and mobile apps
-                    </p>
-            </div>
-            <div id="holder"></div>
-            <ul class="burger-collabsed burger-expanded">
-                <li>
-                    <input data-content="projects" checked type="radio" id="proj-radio" name="section-rad">
-                    <label for="proj-radio">
-                        <span class="material-symbols-outlined">code</span>
-                        Projects
-                    </label>
-                </li>
-                <li>
-                    <input data-content="skills" type="radio" id="skill-radio" name="section-rad">
-                    <label for="skill-radio">
-                        <span class="material-symbols-outlined">handyman</span>
-                        Skills
-                    </label>
-                </li>
-                <li>
-                    <input data-content="education" type="radio" id="edu-radio" name="section-rad">
-                    <label for="edu-radio">
-                        <span class="material-symbols-outlined">school</span>
-                        Education
-                    </label>
-                </li>
-                <li>
-                    <input data-content="achievements" type="radio" id="ach-radio" name="section-rad">
-                    <label for="ach-radio">
-                        <span class="material-symbols-outlined">trophy</span>
-                        Achievements
-                    </label>
-                </li>
-                <li>
-                    <input data-content="contact" type="radio" id="con-radio" name="section-rad">
-                    <label for="con-radio">
-                        <span class="material-symbols-outlined">call</span>
-                        Contact
-                    </label>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <video autoplay muted loop id="bg-video">
-        <source src="supplies/vids/bg.mp4" type="video/mp4">
+<header>
+<nav class=nav-bar>
+<div id=intro>
+<section>
+<div id=name class=centered-flex>
+<span class=material-symbols-outlined>
+person
+</span> Anas Eshtaiwi
+</div>
+<div id=cc><span></span><span></span><span></span></div>
+</section>
+<h1 class=centered-flex>Welcome <span class=material-symbols-outlined>
+waving_hand
+</span></h1>
+<section id=brief class="centered-flex col-flex">
+<h2 id=name class=centered-flex><span class=material-symbols-outlined>
+person
+</span> Anas Eshtaiwi
+</h2>
+<p class=centered-flex>
+Fresh computer science graduate, passionate coder and looking for a job in software development. with experience in developing web, and mobile apps
+</p>
+</section></div>
+<div id=holder></div>
+<ul class="burger-collabsed burger-expanded">
+<li>
+<input data-content=projects checked type=radio id=proj-radio name=section-rad>
+<label for=proj-radio>
+<span class=material-symbols-outlined>code</span>
+Projects
+</label>
+</li>
+<li>
+<input data-content=skills type=radio id=skill-radio name=section-rad>
+<label for=skill-radio>
+<span class=material-symbols-outlined>handyman</span>
+Skills
+</label>
+</li>
+<li>
+<input data-content=education type=radio id=edu-radio name=section-rad>
+<label for=edu-radio>
+<span class=material-symbols-outlined>school</span>
+Education
+</label>
+</li>
+<li>
+<input data-content=achievements type=radio id=ach-radio name=section-rad>
+<label for=ach-radio>
+<span class=material-symbols-outlined>trophy</span>
+Achievements
+</label>
+</li>
+<li>
+<input data-content=contact type=radio id=con-radio name=section-rad>
+<label for=con-radio>
+<span class=material-symbols-outlined>call</span>
+Contact
+</label>
+</li>
+</ul>
+</nav>
+</header>
+<video autoplay muted loop id=bg-video>
+<source src=supplies/vids/bg.mp4 type=video/mp4>
+</video>
+<div id=main-wrapper>
+<div id=projects class="topic-container hidden" style=position:relative>
+<h1 class=topic-header>Projects
+<div class=swiper-container>
+<div class=swiper-wrapper>
+</div>
+</div>
+<div class=swiper-button-next></div>
+<div class=swiper-button-prev></div>
+</h1></div>
+<div id=skills class="topic-container hidden centered-flex col-flex">
+<h1 class=topic-header>Skills</h1>
+<div class="details width8">
+<ul class=points-list>
+<li>Requirements driven entity and relationship identification for proper database modeling.</li>
+<li>Utilizing database triggers and handlers.</li>
+<li>Following OOP concepts in development.</li>
+<li>Building fully functional applications considering (Front-end, Backend) design and implementation following design patterns and clean code principles.</li>
+<li>Developing custom APIs with role-based services and variations.</li>
+<li>Problem solving and binding with deep, long practical experience.</li>
+<li>Data Structures design and implementation.</li>
+<li>Inspect &amp; Search to solve and learn.</li>
+</ul>
+<ul class="skills-list centered-flex">
+<li><svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 256 317">
+<defs>
+<linearGradient id=logosFlutter0 x1=3.952% x2=75.897% y1=26.993% y2=52.919%>
+<stop offset=0% />
+<stop offset=100% stop-opacity=0 />
+</linearGradient>
+</defs>
+<path fill=#47C5FB d="M157.666.001L.001 157.666l48.8 48.8L255.268.001zm-1.099 145.396l-84.418 84.418l48.984 49.716l48.71-48.71l85.425-85.424z"/>
+<path fill=#00569E d="m121.133 279.531l37.082 37.082h97.052l-85.425-85.792z"/>
+<path fill=#00B5F8 d="m71.6 230.364l48.801-48.801l49.441 49.258l-48.709 48.71z"/>
+<path fill=url(#logosFlutter0) fill-opacity=.8 d="m121.133 279.531l40.56-13.459l4.029-31.131z"/>
+</svg><span>Flutter</span></li>
+<li><svg xmlns=http://www.w3.org/2000/svg width=90px height=90px viewBox="0 0 256 256">
+<defs>
+<radialGradient id=logosDart0 cx=50% cy=50.002% r=50.004% fx=50% fy=50.002% gradientTransform="scale(1 .99985)">
+<stop offset=0% stop-color=#FFF stop-opacity=.1 />
+<stop offset=100% stop-color=#FFF stop-opacity=0 />
+</radialGradient>
+</defs>
+<path fill=#01579B d="M52.209 203.791L8.413 159.995C3.218 154.67 0 147.141 0 139.782c0-3.407 1.92-8.733 3.369-11.782l40.427-84.204l8.413 159.995Z"/>
+<path fill=#40C4FF d="M202.116 52.209L158.32 8.413C154.5 4.573 146.538 0 139.8 0c-5.796 0-11.48 1.167-15.15 3.369L43.815 43.796l158.301 8.413ZM104.418 256h106.111v-45.471l-79.16-25.276l-72.422 25.276z"/>
+<path fill=#29B6F6 d="M43.796 180.209c0 13.513 1.694 16.826 8.413 23.582l6.738 6.738h151.582l-74.097-84.204l-92.636-82.53V180.21Z"/>
+<path fill=#01579B d="M178.534 43.777H43.796L210.529 210.51H256V106.093L202.097 52.19c-7.566-7.585-14.285-8.413-23.563-8.413Z"/>
+<path fill=#FFF d="M53.903 205.466c-6.738-6.756-8.413-13.419-8.413-25.257V45.47l-1.675-1.675v136.413c-.02 11.838-.02 15.113 10.088 25.257l5.044 5.044l-5.044-5.044Z" opacity=.2 />
+<path fill=#263238 d="M254.325 104.418v104.417h-45.471l1.675 1.694H256V106.093z" opacity=.2 />
+<path fill=#FFF d="M202.116 52.209c-8.356-8.357-15.188-8.413-25.257-8.413H43.815l1.675 1.675h131.369c5.025 0 17.71-.847 25.257 6.738Z" opacity=.2 />
+<path fill=url(#logosDart0) d="m254.325 104.418l-52.209-52.21L158.32 8.414C154.5 4.573 146.538 0 139.8 0c-5.796 0-11.48 1.167-15.15 3.369L43.815 43.796L3.388 128c-1.45 3.068-3.37 8.394-3.37 11.782c0 7.359 3.238 14.868 8.414 20.213l40.351 40.07c.96 1.185 2.09 2.39 3.426 3.726l1.675 1.675l5.044 5.044l43.796 43.796l1.675 1.675H210.49v-45.47h45.471V106.092l-1.637-1.675Z" opacity=.2 />
+</svg><span>Dart</span></li>
+<li><svg xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink aria-hidden=true focusable=false width=90px height=90px preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256" class=iconify data-icon=logos:javascript data-inline=false data-width=90px data-height=90px style=transform:rotate(360deg)>
+<path fill=#F7DF1E d="M0 0h256v256H0V0Z"></path>
+<path d="m67.312 213.932l19.59-11.856c3.78 6.701 7.218 12.371 15.465 12.371c7.905 0 12.89-3.092 12.89-15.12v-81.798h24.057v82.138c0 24.917-14.606 36.259-35.916 36.259c-19.245 0-30.416-9.967-36.087-21.996m85.07-2.576l19.588-11.341c5.157 8.421 11.859 14.607 23.715 14.607c9.969 0 16.325-4.984 16.325-11.858c0-8.248-6.53-11.17-17.528-15.98l-6.013-2.58c-17.357-7.387-28.87-16.667-28.87-36.257c0-18.044 13.747-31.792 35.228-31.792c15.294 0 26.292 5.328 34.196 19.247l-18.732 12.03c-4.125-7.389-8.591-10.31-15.465-10.31c-7.046 0-11.514 4.468-11.514 10.31c0 7.217 4.468 10.14 14.778 14.608l6.014 2.577c20.45 8.765 31.963 17.7 31.963 37.804c0 21.654-17.012 33.51-39.867 33.51c-22.339 0-36.774-10.654-43.819-24.574">
+</path>
+</svg><span>JavaScript</span></li>
+<li><svg xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink aria-hidden=true focusable=false width=90px height=90px preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" class=iconify data-icon=vscode-icons:file-type-html data-inline=false data-width=90px data-height=90px style=transform:rotate(360deg)>
+<path fill=#e44f26 d="M5.902 27.201L3.655 2h24.69l-2.25 25.197L15.985 30L5.902 27.201z">
+</path>
+<path fill=#f1662a d="m16 27.858l8.17-2.265l1.922-21.532H16v23.797z"></path>
+<path fill=#ebebeb d="M16 13.407h-4.09l-.282-3.165H16V7.151H8.25l.074.83l.759 8.517H16v-3.091zm0 8.027l-.014.004l-3.442-.929l-.22-2.465H9.221l.433 4.852l6.332 1.758l.014-.004v-3.216z">
+</path>
+<path fill=#fff d="M15.989 13.407v3.091h3.806l-.358 4.009l-3.448.93v3.216l6.337-1.757l.046-.522l.726-8.137l.076-.83h-7.185zm0-6.256v3.091h7.466l.062-.694l.141-1.567l.074-.83h-7.743z">
+</path>
+</svg><span>HTML</span></li>
+<li><svg xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink aria-hidden=true focusable=false width=90px height=90px preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" class=iconify data-icon=vscode-icons:file-type-css data-inline=false data-width=90px data-height=90px style=transform:rotate(360deg)>
+<path fill=#1572b6 d="M5.902 27.201L3.656 2h24.688l-2.249 25.197L15.985 30L5.902 27.201z">
+</path>
+<path fill=#33a9dc d="m16 27.858l8.17-2.265l1.922-21.532H16v23.797z"></path>
+<path fill=#fff d="M16 13.191h4.09l.282-3.165H16V6.935h7.75l-.074.829l-.759 8.518H16v-3.091z">
+</path>
+<path fill=#ebebeb d="m16.019 21.218l-.014.004l-3.442-.93l-.22-2.465H9.24l.433 4.853l6.331 1.758l.015-.004v-3.216z">
+</path>
+<path fill=#fff d="m19.827 16.151l-.372 4.139l-3.447.93v3.216l6.336-1.756l.047-.522l.537-6.007h-3.101z">
+</path>
+<path fill=#ebebeb d="M16.011 6.935v3.091H8.545l-.062-.695l-.141-1.567l-.074-.829h7.743zM16 13.191v3.091h-3.399l-.062-.695l-.14-1.567l-.074-.829H16z">
+</path>
+</svg><span>CSS</span></li>
+<li><svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 32 32">
+<path fill=currentColor d="M24 21V9h-2v14h8v-2h-6zM18 9h-4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h1v2a2 2 0 0 0 2 2h2v-2h-2v-2h1a2 2 0 0 0 2-2V11a2 2 0 0 0-2-2zm-4 12V11h4v10zm-6 2H2v-2h6v-4H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h6v2H4v4h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2z"/>
+</svg><span>SQL</span></li>
+<li><svg xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink aria-hidden=true focusable=false width=90px height=90px preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 135" class=iconify data-icon=logos:php data-inline=false data-width=90px data-height=90px style=transform:rotate(360deg)>
+<defs>
+<radialGradient id=IconifyId-189321f6137-9280aa-24 cx=.837 cy=-125.811 r=363.057 gradientTransform="matrix(.463 0 0 .463 76.464 81.918)" gradientUnits=userSpaceOnUse>
+<stop offset=0 stop-color=#FFF></stop>
+<stop offset=.5 stop-color=#4C6B97></stop>
+<stop offset=1 stop-color=#231F20></stop>
+</radialGradient>
+</defs>
+<ellipse cx=128 cy=67.3 fill=url(#IconifyId-189321f6137-9280aa-24) rx=128 ry=67.3>
+</ellipse>
+<ellipse cx=128 cy=67.3 fill=#6181B6 rx=123 ry=62.3></ellipse>
+<path fill=#FFF d="m152.9 87.5l6.1-31.4c1.4-7.1.2-12.4-3.4-15.7c-3.5-3.2-9.5-4.8-18.3-4.8h-10.6l3-15.6c.1-.6 0-1.2-.4-1.7s-.9-.7-1.5-.7h-14.6c-1 0-1.8.7-2 1.6l-6.5 33.3c-.6-3.8-2-7-4.4-9.6c-4.3-4.9-11-7.4-20.1-7.4H52.1c-1 0-1.8.7-2 1.6L37 104.7c-.1.6 0 1.2.4 1.7s.9.7 1.5.7h14.7c1 0 1.8-.7 2-1.6l3.2-16.3h10.9c5.7 0 10.6-.6 14.3-1.8c3.9-1.3 7.4-3.4 10.5-6.3c2.5-2.3 4.6-4.9 6.2-7.7l-2.6 13.5c-.1.6 0 1.2.4 1.7s.9.7 1.5.7h14.6c1 0 1.8-.7 2-1.6l7.2-37h10c4.3 0 5.5.8 5.9 1.2c.3.3.9 1.5.2 5.2L134.1 87c-.1.6 0 1.2.4 1.7s.9.7 1.5.7h15c.9-.3 1.7-1 1.9-1.9zm-67.6-26c-.9 4.7-2.6 8.1-5.1 10c-2.5 1.9-6.6 2.9-12 2.9h-6.5l4.7-24.2h8.4c6.2 0 8.7 1.3 9.7 2.4c1.3 1.6 1.6 4.7.8 8.9zm130-18.6c-4.3-4.9-11-7.4-20.1-7.4h-28.3c-1 0-1.8.7-2 1.6l-13.1 67.5c-.1.6 0 1.2.4 1.7s.9.7 1.5.7h14.7c1 0 1.8-.7 2-1.6l3.2-16.3h10.9c5.7 0 10.6-.6 14.3-1.8c3.9-1.3 7.4-3.4 10.5-6.3c2.6-2.4 4.8-5.1 6.4-8c1.6-2.9 2.8-6.1 3.5-9.6c1.7-8.7.4-15.5-3.9-20.5zM200 61.5c-.9 4.7-2.6 8.1-5.1 10c-2.5 1.9-6.6 2.9-12 2.9h-6.5l4.7-24.2h8.4c6.2 0 8.7 1.3 9.7 2.4c1.4 1.6 1.7 4.7.8 8.9z">
+</path>
+<path fill=#000004 d="M74.8 48.2c5.6 0 9.3 1 11.2 3.1c1.9 2.1 2.3 5.6 1.3 10.6c-1 5.2-3 9-5.9 11.2c-2.9 2.2-7.3 3.3-13.2 3.3h-8.9l5.5-28.2h10zM39 105h14.7l3.5-17.9h12.6c5.6 0 10.1-.6 13.7-1.8c3.6-1.2 6.8-3.1 9.8-5.9c2.5-2.3 4.5-4.8 6-7.5s2.6-5.7 3.2-9c1.6-8 .4-14.2-3.5-18.7s-10.1-6.7-18.6-6.7H52.1L39 105zm74.3-85.4h14.6l-3.5 17.9h13c8.2 0 13.8 1.4 16.9 4.3c3.1 2.9 4 7.5 2.8 13.9L151 87.1h-14.8l5.8-29.9c.7-3.4.4-5.7-.7-6.9c-1.1-1.2-3.6-1.9-7.3-1.9h-11.7l-7.5 38.7h-14.6l13.1-67.5zm76.2 28.6c5.6 0 9.3 1 11.2 3.1c1.9 2.1 2.3 5.6 1.3 10.6c-1 5.2-3 9-5.9 11.2c-2.9 2.2-7.3 3.3-13.2 3.3H174l5.5-28.2h10zM153.7 105h14.7l3.5-17.9h12.6c5.6 0 10.1-.6 13.7-1.8c3.6-1.2 6.8-3.1 9.8-5.9c2.5-2.3 4.5-4.8 6-7.5s2.6-5.7 3.2-9c1.6-8 .4-14.2-3.5-18.7s-10.1-6.7-18.6-6.7h-28.3L153.7 105z">
+</path>
+</svg><span class=text-center>PHP</span></li>
+<li><svg xmlns=http://www.w3.org/2000/svg width=128 height=128 viewBox="0 0 128 128">
+<path fill=#00599c d="M118.766 95.82c.89-1.543 1.441-3.28 1.441-4.843V36.78c0-1.558-.55-3.297-1.441-4.84l-55.32 31.94Zm0 0"/>
+<path fill=#004482 d="m68.36 126.586l46.933-27.094c1.352-.781 2.582-2.129 3.473-3.672l-55.32-31.94L8.12 95.82c.89 1.543 2.121 2.89 3.473 3.672l46.933 27.094c2.703 1.562 7.13 1.562 9.832 0Zm0 0"/>
+<path fill=#659ad2 d="M118.766 31.941c-.891-1.546-2.121-2.894-3.473-3.671L68.359 1.172c-2.703-1.563-7.129-1.563-9.832 0L11.594 28.27C8.89 29.828 6.68 33.66 6.68 36.78v54.196c0 1.562.55 3.3 1.441 4.843L63.445 63.88Zm0 0"/>
+<path fill=#fff d="M63.445 26.035c-20.867 0-37.843 16.977-37.843 37.844s16.976 37.844 37.843 37.844c13.465 0 26.024-7.247 32.77-18.91L79.84 73.335c-3.38 5.84-9.66 9.465-16.395 9.465c-10.433 0-18.922-8.488-18.922-18.922c0-10.434 8.49-18.922 18.922-18.922c6.73 0 13.017 3.629 16.39 9.465l16.38-9.477c-6.75-11.664-19.305-18.91-32.77-18.91zM92.88 57.57v4.207h-4.207v4.203h4.207v4.207h4.203V65.98h4.203v-4.203h-4.203V57.57H92.88zm15.766 0v4.207h-4.204v4.203h4.204v4.207h4.207V65.98h4.203v-4.203h-4.203V57.57h-4.207z"/>
+</svg><span>C++</span></li>
+<li><svg xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink aria-hidden=true focusable=false width=90px height=90px preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 346" class=iconify data-icon=logos:java data-inline=false data-width=90px data-height=90px style=transform:rotate(360deg)>
+<path fill=#5382A1 d="M82.554 267.473s-13.198 7.675 9.393 10.272c27.369 3.122 41.356 2.675 71.517-3.034c0 0 7.93 4.972 19.003 9.279c-67.611 28.977-153.019-1.679-99.913-16.517m-8.262-37.814s-14.803 10.958 7.805 13.296c29.236 3.016 52.324 3.263 92.276-4.43c0 0 5.526 5.602 14.215 8.666c-81.747 23.904-172.798 1.885-114.296-17.532">
+</path>
+<path fill=#E76F00 d="M143.942 165.515c16.66 19.18-4.377 36.44-4.377 36.44s42.301-21.837 22.874-49.183c-18.144-25.5-32.059-38.172 43.268-81.858c0 0-118.238 29.53-61.765 94.6">
+</path>
+<path fill=#5382A1 d="M233.364 295.442s9.767 8.047-10.757 14.273c-39.026 11.823-162.432 15.393-196.714.471c-12.323-5.36 10.787-12.8 18.056-14.362c7.581-1.644 11.914-1.337 11.914-1.337c-13.705-9.655-88.583 18.957-38.034 27.15c137.853 22.356 251.292-10.066 215.535-26.195M88.9 190.48s-62.771 14.91-22.228 20.323c17.118 2.292 51.243 1.774 83.03-.89c25.978-2.19 52.063-6.85 52.063-6.85s-9.16 3.923-15.787 8.448c-63.744 16.765-186.886 8.966-151.435-8.183c29.981-14.492 54.358-12.848 54.358-12.848m112.605 62.942c64.8-33.672 34.839-66.03 13.927-61.67c-5.126 1.066-7.411 1.99-7.411 1.99s1.903-2.98 5.537-4.27c41.37-14.545 73.187 42.897-13.355 65.647c0 .001 1.003-.895 1.302-1.697">
+</path>
+<path fill=#E76F00 d="M162.439.371s35.887 35.9-34.037 91.101c-56.071 44.282-12.786 69.53-.023 98.377c-32.73-29.53-56.75-55.526-40.635-79.72C111.395 74.612 176.918 57.393 162.439.37">
+</path>
+<path fill=#5382A1 d="M95.268 344.665c62.199 3.982 157.712-2.209 159.974-31.64c0 0-4.348 11.158-51.404 20.018c-53.088 9.99-118.564 8.824-157.399 2.421c.001 0 7.95 6.58 48.83 9.201">
+</path>
+</svg><span>Java</span></li>
+<li><svg xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink aria-hidden=true focusable=false width=90px height=90px preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256" class=iconify data-icon=logos:git-icon data-inline=false data-width=90px data-height=90px style=transform:rotate(360deg)>
+<path fill=#DE4C36 d="M251.172 116.594L139.4 4.828c-6.433-6.437-16.873-6.437-23.314 0l-23.21 23.21l29.443 29.443c6.842-2.312 14.688-.761 20.142 4.693c5.48 5.489 7.02 13.402 4.652 20.266l28.375 28.376c6.865-2.365 14.786-.835 20.269 4.657c7.663 7.66 7.663 20.075 0 27.74c-7.665 7.666-20.08 7.666-27.749 0c-5.764-5.77-7.188-14.235-4.27-21.336l-26.462-26.462l-.003 69.637a19.82 19.82 0 0 1 5.188 3.71c7.663 7.66 7.663 20.076 0 27.747c-7.665 7.662-20.086 7.662-27.74 0c-7.663-7.671-7.663-20.086 0-27.746a19.654 19.654 0 0 1 6.421-4.281V94.196a19.378 19.378 0 0 1-6.421-4.281c-5.806-5.798-7.202-14.317-4.227-21.446L81.47 39.442L4.83 116.077c-6.44 6.443-6.44 16.884 0 23.322l111.774 111.768c6.435 6.438 16.873 6.438 23.316 0l111.251-111.249c6.438-6.44 6.438-16.887 0-23.324">
+</path>
+</svg><span>Git</span></li>
+<li><svg xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink aria-hidden=true focusable=false width=90px height=90px preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 255" class=iconify data-icon=logos:python data-inline=false data-width=90px data-height=90px style=transform:rotate(360deg)>
+<defs>
+<linearGradient id=IconifyId-189321f6137-d7310d-25 x1=12.959% x2=79.639% y1=12.039% y2=78.201%>
+<stop offset=0% stop-color=#387EB8></stop>
+<stop offset=100% stop-color=#366994></stop>
+</linearGradient>
+<linearGradient id=IconifyId-189321f6137-d7310d-26 x1=19.128% x2=90.742% y1=20.579% y2=88.429%>
+<stop offset=0% stop-color=#FFE052></stop>
+<stop offset=100% stop-color=#FFC331></stop>
+</linearGradient>
+</defs>
+<path fill=url(#IconifyId-189321f6137-d7310d-25) d="M126.916.072c-64.832 0-60.784 28.115-60.784 28.115l.072 29.128h61.868v8.745H41.631S.145 61.355.145 126.77c0 65.417 36.21 63.097 36.21 63.097h21.61v-30.356s-1.165-36.21 35.632-36.21h61.362s34.475.557 34.475-33.319V33.97S194.67.072 126.916.072ZM92.802 19.66a11.12 11.12 0 0 1 11.13 11.13a11.12 11.12 0 0 1-11.13 11.13a11.12 11.12 0 0 1-11.13-11.13a11.12 11.12 0 0 1 11.13-11.13Z">
+</path>
+<path fill=url(#IconifyId-189321f6137-d7310d-26) d="M128.757 254.126c64.832 0 60.784-28.115 60.784-28.115l-.072-29.127H127.6v-8.745h86.441s41.486 4.705 41.486-60.712c0-65.416-36.21-63.096-36.21-63.096h-21.61v30.355s1.165 36.21-35.632 36.21h-61.362s-34.475-.557-34.475 33.32v56.013s-5.235 33.897 62.518 33.897Zm34.114-19.586a11.12 11.12 0 0 1-11.13-11.13a11.12 11.12 0 0 1 11.13-11.131a11.12 11.12 0 0 1 11.13 11.13a11.12 11.12 0 0 1-11.13 11.13Z">
+</path>
+</svg><span>Python</span></li>
+</ul>
+</div>
+</div>
+<div id=education class="topic-container hidden col-flex centered-flex">
+<h1 class=topic-header>
+Eduaction
+</h1>
+<div class="card centered-flex">
+<img src=supplies/img/iau.jpg>
+<div class="col-flex centered-flex">
+<section class="centered-flex col-flex">
+<span>Bachelor in </span>
+<h3>
+Computer Science 2023
+</h3>
+</section>
+<p>GPA: <strong>4.6</strong></p>
+<p>Second class honors</p>
 
-    </video>
-
-    <div id="main-wrapper">
-
-        <!-- <section style="padding-top:var(--headerH);">
-            Welcome to my portfolio!
-            
-        </section> -->
-        <div id="projects" class="topic-container hidden" style="position: relative;">
-            <h1 class="topic-header">Projects</h2>
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <!-- 
-                        <div class="swiper-slide">
-                            <div class="details">
-                                <section>
-                                    <h3>Pets shop</h3>
-                                    <p class="light techs">HTML/CSS, js, PHP</p>
-                                </section>
-                                <section>
-                                    <video autoplay loop muted src="supplies/vids/pety rep.mp4"></video>
-                                    <div class="more">
-                                        <section class="radios">
-                                            <input type="radio" checked name="radp0" id="rad0">
-                                            <label for="rad0">
-                                                <p class="tab-nail">About</p>
-                                            </label>
-                                            <input type="radio" name="radp0" id="rad1">
-                                            <label for="rad1">
-                                                <p class="tab-nail">Features</p>
-                                            </label>
-                                            <input type="radio" name="radp0" id="rad2">
-                                            <label for="rad2">
-                                                <p class="tab-nail">Challanges</p>
-                                            </label>
-                                            <label for="rad0">
-                                                <p class="tab-nail"><a href="ds.com">Demo</a></p>
-                                            </label>
-                                        </section>
-                                        <section class="tab-content">
-                                            c0 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio dolor
-                                            nemo
-                                            quam quod
-                                            dolore
-                                            blanditiis maiores veritatis, autem minus adipisci ad placeat repellendus
-                                            iure
-                                            soluta
-                                            nostrum aperiam consequuntur quia hic.
-                                        </section>
-                                        <section class="tab-content">
-                                            c1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio dolor
-                                            nemo
-                                            quam quod
-                                            dolore
-                                            blanditiis maiores veritatis, autem minus adipisci ad placeat repellendus
-                                            iure
-                                            soluta
-                                            nostrum aperiam consequuntur quia hic.
-                                        </section>
-                                        <section class="tab-content">
-                                            c2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio dolor
-                                            nemo
-                                            quam quod
-                                            dolore
-                                            blanditiis maiores veritatis, autem minus adipisci ad placeat repellendus
-                                            iure
-                                            soluta
-                                            nostrum aperiam consequuntur quia hic.
-                                        </section>
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="details">
-                                <section>
-                                    <h3>Mobile Auction Application</h3>
-                                    <p class="light techs">Flutter (Dart language), Backendless BaaS</p>
-                                </section>
-                                <section>
-                                    <video autoplay loop muted src="supplies/vids/zoodha.mp4"></video>
-                                    <div class="more">
-                                        <section class="radios">
-                                            <input type="radio" checked name="radp0" id="rad0">
-                                            <label for="rad0">
-                                                <p class="tab-nail">About</p>
-                                            </label>
-                                            <input type="radio" name="radp0" id="rad1">
-                                            <label for="rad1">
-                                                <p class="tab-nail">Features</p>
-                                            </label>
-                                            <input type="radio" name="radp0" id="rad2">
-                                            <label for="rad2">
-                                                <p class="tab-nail">Challanges</p>
-                                            </label>
-                                        </section>
-                                        <section class="tab-content">
-                                            c0 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio dolor
-                                            nemo
-                                            quam quod
-                                            dolore
-                                            blanditiis maiores veritatis, autem minus adipisci ad placeat repellendus
-                                            iure
-                                            soluta
-                                            nostrum aperiam consequuntur quia hic.
-                                        </section>
-                                        <section class="tab-content">
-                                            c1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio dolor
-                                            nemo
-                                            quam quod
-                                            dolore
-                                            blanditiis maiores veritatis, autem minus adipisci ad placeat repellendus
-                                            iure
-                                            soluta
-                                            nostrum aperiam consequuntur quia hic.
-                                        </section>
-                                        <section class="tab-content">
-                                            c2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio dolor
-                                            nemo
-                                            quam quod
-                                            dolore
-                                            blanditiis maiores veritatis, autem minus adipisci ad placeat repellendus
-                                            iure
-                                            soluta
-                                            nostrum aperiam consequuntur quia hic.
-                                        </section>
-                                    </div>
-                                </section>
-                            </div>
-                        </div> -->
-                        <!-- Add more slides as needed -->
-                    </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-        </div>
-
-
-
-        <div id="skills" class="topic-container hidden centered-flex col-flex">
-            <h1 class="topic-header">Skills</h1>
-            <div class="details width8">
-                <ul class="points-list">
-                    <li>Requirements driven entity and relationship identification for proper database modeling.</li>
-                    <li>Utilizing database triggers and handlers.</li>
-                    <li>Following OOP concepts in development.</li>
-                    <li>Building fully functional applications considering (Front-end, Backend) design and
-                        implementation following design
-                        patterns and clean code principles.</li>
-                    <li>Developing custom APIs with role-based services and variations.</li>
-                    <li>Problem solving and binding with deep, long practical experience.</li>
-                    <li>Data Structures design and implementation.</li>
-                    <li>Inspect &amp; Search to solve and learn.</li>
-                </ul>
-                <ul class="skills-list centered-flex">
-                    <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 317">
-                            <defs>
-                                <linearGradient id="logosFlutter0" x1="3.952%" x2="75.897%" y1="26.993%" y2="52.919%">
-                                    <stop offset="0%" />
-                                    <stop offset="100%" stop-opacity="0" />
-                                </linearGradient>
-                            </defs>
-                            <path fill="#47C5FB"
-                                d="M157.666.001L.001 157.666l48.8 48.8L255.268.001zm-1.099 145.396l-84.418 84.418l48.984 49.716l48.71-48.71l85.425-85.424z" />
-                            <path fill="#00569E" d="m121.133 279.531l37.082 37.082h97.052l-85.425-85.792z" />
-                            <path fill="#00B5F8" d="m71.6 230.364l48.801-48.801l49.441 49.258l-48.709 48.71z" />
-                            <path fill="url(#logosFlutter0)" fill-opacity=".8"
-                                d="m121.133 279.531l40.56-13.459l4.029-31.131z" />
-                        </svg><span>Flutter</span></li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" width="90px" height="90px" viewBox="0 0 256 256">
-                            <defs>
-                                <radialGradient id="logosDart0" cx="50%" cy="50.002%" r="50.004%" fx="50%" fy="50.002%"
-                                    gradientTransform="scale(1 .99985)">
-                                    <stop offset="0%" stop-color="#FFF" stop-opacity=".1" />
-                                    <stop offset="100%" stop-color="#FFF" stop-opacity="0" />
-                                </radialGradient>
-                            </defs>
-                            <path fill="#01579B"
-                                d="M52.209 203.791L8.413 159.995C3.218 154.67 0 147.141 0 139.782c0-3.407 1.92-8.733 3.369-11.782l40.427-84.204l8.413 159.995Z" />
-                            <path fill="#40C4FF"
-                                d="M202.116 52.209L158.32 8.413C154.5 4.573 146.538 0 139.8 0c-5.796 0-11.48 1.167-15.15 3.369L43.815 43.796l158.301 8.413ZM104.418 256h106.111v-45.471l-79.16-25.276l-72.422 25.276z" />
-                            <path fill="#29B6F6"
-                                d="M43.796 180.209c0 13.513 1.694 16.826 8.413 23.582l6.738 6.738h151.582l-74.097-84.204l-92.636-82.53V180.21Z" />
-                            <path fill="#01579B"
-                                d="M178.534 43.777H43.796L210.529 210.51H256V106.093L202.097 52.19c-7.566-7.585-14.285-8.413-23.563-8.413Z" />
-                            <path fill="#FFF"
-                                d="M53.903 205.466c-6.738-6.756-8.413-13.419-8.413-25.257V45.47l-1.675-1.675v136.413c-.02 11.838-.02 15.113 10.088 25.257l5.044 5.044l-5.044-5.044Z"
-                                opacity=".2" />
-                            <path fill="#263238" d="M254.325 104.418v104.417h-45.471l1.675 1.694H256V106.093z"
-                                opacity=".2" />
-                            <path fill="#FFF"
-                                d="M202.116 52.209c-8.356-8.357-15.188-8.413-25.257-8.413H43.815l1.675 1.675h131.369c5.025 0 17.71-.847 25.257 6.738Z"
-                                opacity=".2" />
-                            <path fill="url(#logosDart0)"
-                                d="m254.325 104.418l-52.209-52.21L158.32 8.414C154.5 4.573 146.538 0 139.8 0c-5.796 0-11.48 1.167-15.15 3.369L43.815 43.796L3.388 128c-1.45 3.068-3.37 8.394-3.37 11.782c0 7.359 3.238 14.868 8.414 20.213l40.351 40.07c.96 1.185 2.09 2.39 3.426 3.726l1.675 1.675l5.044 5.044l43.796 43.796l1.675 1.675H210.49v-45.47h45.471V106.092l-1.637-1.675Z"
-                                opacity=".2" />
-                        </svg><span>Dart</span></li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                            aria-hidden="true" focusable="false" width="90px" height="90px"
-                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256" class="iconify"
-                            data-icon="logos:javascript" data-inline="false" data-width="90px" data-height="90px"
-                            style="transform: rotate(360deg);">
-                            <path fill="#F7DF1E" d="M0 0h256v256H0V0Z"></path>
-                            <path
-                                d="m67.312 213.932l19.59-11.856c3.78 6.701 7.218 12.371 15.465 12.371c7.905 0 12.89-3.092 12.89-15.12v-81.798h24.057v82.138c0 24.917-14.606 36.259-35.916 36.259c-19.245 0-30.416-9.967-36.087-21.996m85.07-2.576l19.588-11.341c5.157 8.421 11.859 14.607 23.715 14.607c9.969 0 16.325-4.984 16.325-11.858c0-8.248-6.53-11.17-17.528-15.98l-6.013-2.58c-17.357-7.387-28.87-16.667-28.87-36.257c0-18.044 13.747-31.792 35.228-31.792c15.294 0 26.292 5.328 34.196 19.247l-18.732 12.03c-4.125-7.389-8.591-10.31-15.465-10.31c-7.046 0-11.514 4.468-11.514 10.31c0 7.217 4.468 10.14 14.778 14.608l6.014 2.577c20.45 8.765 31.963 17.7 31.963 37.804c0 21.654-17.012 33.51-39.867 33.51c-22.339 0-36.774-10.654-43.819-24.574">
-                            </path>
-                        </svg><span>JavaScript</span></li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                            aria-hidden="true" focusable="false" width="90px" height="90px"
-                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" class="iconify"
-                            data-icon="vscode-icons:file-type-html" data-inline="false" data-width="90px"
-                            data-height="90px" style="transform: rotate(360deg);">
-                            <path fill="#e44f26" d="M5.902 27.201L3.655 2h24.69l-2.25 25.197L15.985 30L5.902 27.201z">
-                            </path>
-                            <path fill="#f1662a" d="m16 27.858l8.17-2.265l1.922-21.532H16v23.797z"></path>
-                            <path fill="#ebebeb"
-                                d="M16 13.407h-4.09l-.282-3.165H16V7.151H8.25l.074.83l.759 8.517H16v-3.091zm0 8.027l-.014.004l-3.442-.929l-.22-2.465H9.221l.433 4.852l6.332 1.758l.014-.004v-3.216z">
-                            </path>
-                            <path fill="#fff"
-                                d="M15.989 13.407v3.091h3.806l-.358 4.009l-3.448.93v3.216l6.337-1.757l.046-.522l.726-8.137l.076-.83h-7.185zm0-6.256v3.091h7.466l.062-.694l.141-1.567l.074-.83h-7.743z">
-                            </path>
-                        </svg><span>HTML</span></li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                            aria-hidden="true" focusable="false" width="90px" height="90px"
-                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" class="iconify"
-                            data-icon="vscode-icons:file-type-css" data-inline="false" data-width="90px"
-                            data-height="90px" style="transform: rotate(360deg);">
-                            <path fill="#1572b6" d="M5.902 27.201L3.656 2h24.688l-2.249 25.197L15.985 30L5.902 27.201z">
-                            </path>
-                            <path fill="#33a9dc" d="m16 27.858l8.17-2.265l1.922-21.532H16v23.797z"></path>
-                            <path fill="#fff"
-                                d="M16 13.191h4.09l.282-3.165H16V6.935h7.75l-.074.829l-.759 8.518H16v-3.091z">
-                            </path>
-                            <path fill="#ebebeb"
-                                d="m16.019 21.218l-.014.004l-3.442-.93l-.22-2.465H9.24l.433 4.853l6.331 1.758l.015-.004v-3.216z">
-                            </path>
-                            <path fill="#fff"
-                                d="m19.827 16.151l-.372 4.139l-3.447.93v3.216l6.336-1.756l.047-.522l.537-6.007h-3.101z">
-                            </path>
-                            <path fill="#ebebeb"
-                                d="M16.011 6.935v3.091H8.545l-.062-.695l-.141-1.567l-.074-.829h7.743zM16 13.191v3.091h-3.399l-.062-.695l-.14-1.567l-.074-.829H16z">
-                            </path>
-                        </svg><span>CSS</span></li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                            <path fill="currentColor"
-                                d="M24 21V9h-2v14h8v-2h-6zM18 9h-4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h1v2a2 2 0 0 0 2 2h2v-2h-2v-2h1a2 2 0 0 0 2-2V11a2 2 0 0 0-2-2zm-4 12V11h4v10zm-6 2H2v-2h6v-4H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h6v2H4v4h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2z" />
-                        </svg><span>SQL</span></li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                            aria-hidden="true" focusable="false" width="90px" height="90px"
-                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 135" class="iconify"
-                            data-icon="logos:php" data-inline="false" data-width="90px" data-height="90px"
-                            style="transform: rotate(360deg);">
-                            <defs>
-                                <radialGradient id="IconifyId-189321f6137-9280aa-24" cx=".837" cy="-125.811" r="363.057"
-                                    gradientTransform="matrix(.463 0 0 .463 76.464 81.918)"
-                                    gradientUnits="userSpaceOnUse">
-                                    <stop offset="0" stop-color="#FFF"></stop>
-                                    <stop offset=".5" stop-color="#4C6B97"></stop>
-                                    <stop offset="1" stop-color="#231F20"></stop>
-                                </radialGradient>
-                            </defs>
-                            <ellipse cx="128" cy="67.3" fill="url(#IconifyId-189321f6137-9280aa-24)" rx="128" ry="67.3">
-                            </ellipse>
-                            <ellipse cx="128" cy="67.3" fill="#6181B6" rx="123" ry="62.3"></ellipse>
-                            <path fill="#FFF"
-                                d="m152.9 87.5l6.1-31.4c1.4-7.1.2-12.4-3.4-15.7c-3.5-3.2-9.5-4.8-18.3-4.8h-10.6l3-15.6c.1-.6 0-1.2-.4-1.7s-.9-.7-1.5-.7h-14.6c-1 0-1.8.7-2 1.6l-6.5 33.3c-.6-3.8-2-7-4.4-9.6c-4.3-4.9-11-7.4-20.1-7.4H52.1c-1 0-1.8.7-2 1.6L37 104.7c-.1.6 0 1.2.4 1.7s.9.7 1.5.7h14.7c1 0 1.8-.7 2-1.6l3.2-16.3h10.9c5.7 0 10.6-.6 14.3-1.8c3.9-1.3 7.4-3.4 10.5-6.3c2.5-2.3 4.6-4.9 6.2-7.7l-2.6 13.5c-.1.6 0 1.2.4 1.7s.9.7 1.5.7h14.6c1 0 1.8-.7 2-1.6l7.2-37h10c4.3 0 5.5.8 5.9 1.2c.3.3.9 1.5.2 5.2L134.1 87c-.1.6 0 1.2.4 1.7s.9.7 1.5.7h15c.9-.3 1.7-1 1.9-1.9zm-67.6-26c-.9 4.7-2.6 8.1-5.1 10c-2.5 1.9-6.6 2.9-12 2.9h-6.5l4.7-24.2h8.4c6.2 0 8.7 1.3 9.7 2.4c1.3 1.6 1.6 4.7.8 8.9zm130-18.6c-4.3-4.9-11-7.4-20.1-7.4h-28.3c-1 0-1.8.7-2 1.6l-13.1 67.5c-.1.6 0 1.2.4 1.7s.9.7 1.5.7h14.7c1 0 1.8-.7 2-1.6l3.2-16.3h10.9c5.7 0 10.6-.6 14.3-1.8c3.9-1.3 7.4-3.4 10.5-6.3c2.6-2.4 4.8-5.1 6.4-8c1.6-2.9 2.8-6.1 3.5-9.6c1.7-8.7.4-15.5-3.9-20.5zM200 61.5c-.9 4.7-2.6 8.1-5.1 10c-2.5 1.9-6.6 2.9-12 2.9h-6.5l4.7-24.2h8.4c6.2 0 8.7 1.3 9.7 2.4c1.4 1.6 1.7 4.7.8 8.9z">
-                            </path>
-                            <path fill="#000004"
-                                d="M74.8 48.2c5.6 0 9.3 1 11.2 3.1c1.9 2.1 2.3 5.6 1.3 10.6c-1 5.2-3 9-5.9 11.2c-2.9 2.2-7.3 3.3-13.2 3.3h-8.9l5.5-28.2h10zM39 105h14.7l3.5-17.9h12.6c5.6 0 10.1-.6 13.7-1.8c3.6-1.2 6.8-3.1 9.8-5.9c2.5-2.3 4.5-4.8 6-7.5s2.6-5.7 3.2-9c1.6-8 .4-14.2-3.5-18.7s-10.1-6.7-18.6-6.7H52.1L39 105zm74.3-85.4h14.6l-3.5 17.9h13c8.2 0 13.8 1.4 16.9 4.3c3.1 2.9 4 7.5 2.8 13.9L151 87.1h-14.8l5.8-29.9c.7-3.4.4-5.7-.7-6.9c-1.1-1.2-3.6-1.9-7.3-1.9h-11.7l-7.5 38.7h-14.6l13.1-67.5zm76.2 28.6c5.6 0 9.3 1 11.2 3.1c1.9 2.1 2.3 5.6 1.3 10.6c-1 5.2-3 9-5.9 11.2c-2.9 2.2-7.3 3.3-13.2 3.3H174l5.5-28.2h10zM153.7 105h14.7l3.5-17.9h12.6c5.6 0 10.1-.6 13.7-1.8c3.6-1.2 6.8-3.1 9.8-5.9c2.5-2.3 4.5-4.8 6-7.5s2.6-5.7 3.2-9c1.6-8 .4-14.2-3.5-18.7s-10.1-6.7-18.6-6.7h-28.3L153.7 105z">
-                            </path>
-                        </svg><span class="text-center">PHP</span></li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
-                            <path fill="#00599c"
-                                d="M118.766 95.82c.89-1.543 1.441-3.28 1.441-4.843V36.78c0-1.558-.55-3.297-1.441-4.84l-55.32 31.94Zm0 0" />
-                            <path fill="#004482"
-                                d="m68.36 126.586l46.933-27.094c1.352-.781 2.582-2.129 3.473-3.672l-55.32-31.94L8.12 95.82c.89 1.543 2.121 2.89 3.473 3.672l46.933 27.094c2.703 1.562 7.13 1.562 9.832 0Zm0 0" />
-                            <path fill="#659ad2"
-                                d="M118.766 31.941c-.891-1.546-2.121-2.894-3.473-3.671L68.359 1.172c-2.703-1.563-7.129-1.563-9.832 0L11.594 28.27C8.89 29.828 6.68 33.66 6.68 36.78v54.196c0 1.562.55 3.3 1.441 4.843L63.445 63.88Zm0 0" />
-                            <path fill="#fff"
-                                d="M63.445 26.035c-20.867 0-37.843 16.977-37.843 37.844s16.976 37.844 37.843 37.844c13.465 0 26.024-7.247 32.77-18.91L79.84 73.335c-3.38 5.84-9.66 9.465-16.395 9.465c-10.433 0-18.922-8.488-18.922-18.922c0-10.434 8.49-18.922 18.922-18.922c6.73 0 13.017 3.629 16.39 9.465l16.38-9.477c-6.75-11.664-19.305-18.91-32.77-18.91zM92.88 57.57v4.207h-4.207v4.203h4.207v4.207h4.203V65.98h4.203v-4.203h-4.203V57.57H92.88zm15.766 0v4.207h-4.204v4.203h4.204v4.207h4.207V65.98h4.203v-4.203h-4.203V57.57h-4.207z" />
-                        </svg><span>C++</span></li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                            aria-hidden="true" focusable="false" width="90px" height="90px"
-                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 346" class="iconify"
-                            data-icon="logos:java" data-inline="false" data-width="90px" data-height="90px"
-                            style="transform: rotate(360deg);">
-                            <path fill="#5382A1"
-                                d="M82.554 267.473s-13.198 7.675 9.393 10.272c27.369 3.122 41.356 2.675 71.517-3.034c0 0 7.93 4.972 19.003 9.279c-67.611 28.977-153.019-1.679-99.913-16.517m-8.262-37.814s-14.803 10.958 7.805 13.296c29.236 3.016 52.324 3.263 92.276-4.43c0 0 5.526 5.602 14.215 8.666c-81.747 23.904-172.798 1.885-114.296-17.532">
-                            </path>
-                            <path fill="#E76F00"
-                                d="M143.942 165.515c16.66 19.18-4.377 36.44-4.377 36.44s42.301-21.837 22.874-49.183c-18.144-25.5-32.059-38.172 43.268-81.858c0 0-118.238 29.53-61.765 94.6">
-                            </path>
-                            <path fill="#5382A1"
-                                d="M233.364 295.442s9.767 8.047-10.757 14.273c-39.026 11.823-162.432 15.393-196.714.471c-12.323-5.36 10.787-12.8 18.056-14.362c7.581-1.644 11.914-1.337 11.914-1.337c-13.705-9.655-88.583 18.957-38.034 27.15c137.853 22.356 251.292-10.066 215.535-26.195M88.9 190.48s-62.771 14.91-22.228 20.323c17.118 2.292 51.243 1.774 83.03-.89c25.978-2.19 52.063-6.85 52.063-6.85s-9.16 3.923-15.787 8.448c-63.744 16.765-186.886 8.966-151.435-8.183c29.981-14.492 54.358-12.848 54.358-12.848m112.605 62.942c64.8-33.672 34.839-66.03 13.927-61.67c-5.126 1.066-7.411 1.99-7.411 1.99s1.903-2.98 5.537-4.27c41.37-14.545 73.187 42.897-13.355 65.647c0 .001 1.003-.895 1.302-1.697">
-                            </path>
-                            <path fill="#E76F00"
-                                d="M162.439.371s35.887 35.9-34.037 91.101c-56.071 44.282-12.786 69.53-.023 98.377c-32.73-29.53-56.75-55.526-40.635-79.72C111.395 74.612 176.918 57.393 162.439.37">
-                            </path>
-                            <path fill="#5382A1"
-                                d="M95.268 344.665c62.199 3.982 157.712-2.209 159.974-31.64c0 0-4.348 11.158-51.404 20.018c-53.088 9.99-118.564 8.824-157.399 2.421c.001 0 7.95 6.58 48.83 9.201">
-                            </path>
-                        </svg><span>Java</span></li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                            aria-hidden="true" focusable="false" width="90px" height="90px"
-                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256" class="iconify"
-                            data-icon="logos:git-icon" data-inline="false" data-width="90px" data-height="90px"
-                            style="transform: rotate(360deg);">
-                            <path fill="#DE4C36"
-                                d="M251.172 116.594L139.4 4.828c-6.433-6.437-16.873-6.437-23.314 0l-23.21 23.21l29.443 29.443c6.842-2.312 14.688-.761 20.142 4.693c5.48 5.489 7.02 13.402 4.652 20.266l28.375 28.376c6.865-2.365 14.786-.835 20.269 4.657c7.663 7.66 7.663 20.075 0 27.74c-7.665 7.666-20.08 7.666-27.749 0c-5.764-5.77-7.188-14.235-4.27-21.336l-26.462-26.462l-.003 69.637a19.82 19.82 0 0 1 5.188 3.71c7.663 7.66 7.663 20.076 0 27.747c-7.665 7.662-20.086 7.662-27.74 0c-7.663-7.671-7.663-20.086 0-27.746a19.654 19.654 0 0 1 6.421-4.281V94.196a19.378 19.378 0 0 1-6.421-4.281c-5.806-5.798-7.202-14.317-4.227-21.446L81.47 39.442L4.83 116.077c-6.44 6.443-6.44 16.884 0 23.322l111.774 111.768c6.435 6.438 16.873 6.438 23.316 0l111.251-111.249c6.438-6.44 6.438-16.887 0-23.324">
-                            </path>
-                        </svg><span>Git</span></li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                            aria-hidden="true" focusable="false" width="90px" height="90px"
-                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 255" class="iconify"
-                            data-icon="logos:python" data-inline="false" data-width="90px" data-height="90px"
-                            style="transform: rotate(360deg);">
-                            <defs>
-                                <linearGradient id="IconifyId-189321f6137-d7310d-25" x1="12.959%" x2="79.639%"
-                                    y1="12.039%" y2="78.201%">
-                                    <stop offset="0%" stop-color="#387EB8"></stop>
-                                    <stop offset="100%" stop-color="#366994"></stop>
-                                </linearGradient>
-                                <linearGradient id="IconifyId-189321f6137-d7310d-26" x1="19.128%" x2="90.742%"
-                                    y1="20.579%" y2="88.429%">
-                                    <stop offset="0%" stop-color="#FFE052"></stop>
-                                    <stop offset="100%" stop-color="#FFC331"></stop>
-                                </linearGradient>
-                            </defs>
-                            <path fill="url(#IconifyId-189321f6137-d7310d-25)"
-                                d="M126.916.072c-64.832 0-60.784 28.115-60.784 28.115l.072 29.128h61.868v8.745H41.631S.145 61.355.145 126.77c0 65.417 36.21 63.097 36.21 63.097h21.61v-30.356s-1.165-36.21 35.632-36.21h61.362s34.475.557 34.475-33.319V33.97S194.67.072 126.916.072ZM92.802 19.66a11.12 11.12 0 0 1 11.13 11.13a11.12 11.12 0 0 1-11.13 11.13a11.12 11.12 0 0 1-11.13-11.13a11.12 11.12 0 0 1 11.13-11.13Z">
-                            </path>
-                            <path fill="url(#IconifyId-189321f6137-d7310d-26)"
-                                d="M128.757 254.126c64.832 0 60.784-28.115 60.784-28.115l-.072-29.127H127.6v-8.745h86.441s41.486 4.705 41.486-60.712c0-65.416-36.21-63.096-36.21-63.096h-21.61v30.355s1.165 36.21-35.632 36.21h-61.362s-34.475-.557-34.475 33.32v56.013s-5.235 33.897 62.518 33.897Zm34.114-19.586a11.12 11.12 0 0 1-11.13-11.13a11.12 11.12 0 0 1 11.13-11.131a11.12 11.12 0 0 1 11.13 11.13a11.12 11.12 0 0 1-11.13 11.13Z">
-                            </path>
-                        </svg><span>Python</span></li>
-                </ul>
-            </div>
-        </div>
-        <div id="education" class="topic-container hidden col-flex centered-flex">
-            <h1 class="topic-header">
-                Eduaction
-            </h1>
-
-            <div class="card centered-flex ">
-                <img src="supplies/img/iau.jpg">
-                <div class="col-flex centered-flex">
-                    <section class="centered-flex col-flex">
-                        <span>Bachelor in </span>
-                        <h3>
-                            Computer Science 2023
-                        </h3>
-                    </section>
-                    <p>GPA: <strong>4.6</strong></p>
-                    <p>Second class honors</p>
-                    </ul>
-                </div>
-
-            </div>
-
-        </div>
-        <div id="achievements" class="topic-container hidden col-flex centered-flex">
-
-            <h1 class="topic-header">
-                Achievements
-            </h1>
-            <div class="col-flex centered-flex card">
-                <p class="centered-flex">Ranked second among my colleagues in Computer Science program Ref.</p>
-                <p>Secured first place in a competitive programming contest organized by college programming club
-                    Ref.
-                </p>
-                <p>Ranked 3rd in SQL tournament organized by IAU MIS Committee Ref.</p>
-
-            </div>
-        </div>
-        <div id="contact" class="topic-container hidden col-flex centered-flex">
-
-            <h1 class="topic-header">
-                Contact Me
-            </h1>
-            <section class="col-flex centered-flex width8">
-                <h3 class="centered-flex col-flex">
-                    <p class="centered-flex">
-                        <span class="material-symbols-outlined">
-                            call
-                        </span> <a href="tel:+966548219705">+966548219705</a>
-                    </p>
-                    <p class="centered-flex">
-                        <span class="material-symbols-outlined">
-                            mail
-                        </span> <a href="mailto:anaaas26@hotmail.com">anaaas26@hotmail.com</a>
-                    </p>
-                </h3>
-                <div class="centered-flex">
-                    <a href="https://www.linkedin.com/in/anas-eshtaiwi/" class="centered-flex">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
-                            <path fill="#0076b2"
-                                d="M116 3H12a8.91 8.91 0 0 0-9 8.8v104.42a8.91 8.91 0 0 0 9 8.78h104a8.93 8.93 0 0 0 9-8.81V11.77A8.93 8.93 0 0 0 116 3z" />
-                            <path fill="#fff"
-                                d="M21.06 48.73h18.11V107H21.06zm9.06-29a10.5 10.5 0 1 1-10.5 10.49a10.5 10.5 0 0 1 10.5-10.49m20.41 29h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75v32H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53z" />
-                        </svg>
-                    </a>
-                    <a href="https://github.com/anasesh" class="centered-flex"><svg
-                            xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
-                            <g fill="#181616">
-                                <path fill-rule="evenodd"
-                                    d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388c0 26.682 17.303 49.317 41.297 57.303c3.017.56 4.125-1.31 4.125-2.905c0-1.44-.056-6.197-.082-11.243c-16.8 3.653-20.345-7.125-20.345-7.125c-2.747-6.98-6.705-8.836-6.705-8.836c-5.48-3.748.413-3.67.413-3.67c6.063.425 9.257 6.223 9.257 6.223c5.386 9.23 14.127 6.562 17.573 5.02c.542-3.903 2.107-6.568 3.834-8.076c-13.413-1.525-27.514-6.704-27.514-29.843c0-6.593 2.36-11.98 6.223-16.21c-.628-1.52-2.695-7.662.584-15.98c0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033c11.526-7.813 16.59-6.19 16.59-6.19c3.287 8.317 1.22 14.46.593 15.98c3.872 4.23 6.215 9.617 6.215 16.21c0 23.194-14.127 28.3-27.574 29.796c2.167 1.874 4.097 5.55 4.097 11.183c0 8.08-.07 14.583-.07 16.572c0 1.607 1.088 3.49 4.148 2.897c23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"
-                                    clip-rule="evenodd" />
-                                <path
-                                    d="M26.484 91.806c-.133.3-.605.39-1.035.185c-.44-.196-.685-.605-.543-.906c.13-.31.603-.395 1.04-.188c.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28c-.396-.42-.47-.983-.177-1.254c.298-.266.844-.14 1.24.28c.394.426.472.984.17 1.255zm2.382 3.477c-.37.258-.976.017-1.35-.52c-.37-.538-.37-1.183.01-1.44c.373-.258.97-.025 1.35.507c.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23c-.527-.487-.674-1.18-.343-1.544c.336-.366 1.045-.264 1.564.23c.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486c-.683-.207-1.13-.76-.99-1.238c.14-.477.823-.7 1.512-.485c.683.206 1.13.756.988 1.237zm4.943.361c.017.498-.563.91-1.28.92c-.723.017-1.308-.387-1.315-.877c0-.503.568-.91 1.29-.924c.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117c-.7.13-1.35-.172-1.44-.653c-.086-.498.422-.997 1.122-1.126c.714-.123 1.354.17 1.444.663zm0 0" />
-                            </g>
-                        </svg></a>
-
-                    <a href="https://wa.me/966548219705" class="centered-flex">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="256" height="258" viewBox="0 0 256 258">
-                            <defs>
-                                <linearGradient id="logosWhatsappIcon0" x1="50%" x2="50%" y1="100%" y2="0%">
-                                    <stop offset="0%" stop-color="#1FAF38" />
-                                    <stop offset="100%" stop-color="#60D669" />
-                                </linearGradient>
-                                <linearGradient id="logosWhatsappIcon1" x1="50%" x2="50%" y1="100%" y2="0%">
-                                    <stop offset="0%" stop-color="#F9F9F9" />
-                                    <stop offset="100%" stop-color="#FFF" />
-                                </linearGradient>
-                            </defs>
-                            <path fill="url(#logosWhatsappIcon0)"
-                                d="M5.463 127.456c-.006 21.677 5.658 42.843 16.428 61.499L4.433 252.697l65.232-17.104a122.994 122.994 0 0 0 58.8 14.97h.054c67.815 0 123.018-55.183 123.047-123.01c.013-32.867-12.775-63.773-36.009-87.025c-23.23-23.25-54.125-36.061-87.043-36.076c-67.823 0-123.022 55.18-123.05 123.004" />
-                            <path fill="url(#logosWhatsappIcon1)"
-                                d="M1.07 127.416c-.007 22.457 5.86 44.38 17.014 63.704L0 257.147l67.571-17.717c18.618 10.151 39.58 15.503 60.91 15.511h.055c70.248 0 127.434-57.168 127.464-127.423c.012-34.048-13.236-66.065-37.3-90.15C194.633 13.286 162.633.014 128.536 0C58.276 0 1.099 57.16 1.071 127.416Zm40.24 60.376l-2.523-4.005c-10.606-16.864-16.204-36.352-16.196-56.363C22.614 69.029 70.138 21.52 128.576 21.52c28.3.012 54.896 11.044 74.9 31.06c20.003 20.018 31.01 46.628 31.003 74.93c-.026 58.395-47.551 105.91-105.943 105.91h-.042c-19.013-.01-37.66-5.116-53.922-14.765l-3.87-2.295l-40.098 10.513l10.706-39.082Z" />
-                            <path fill="#FFF"
-                                d="M96.678 74.148c-2.386-5.303-4.897-5.41-7.166-5.503c-1.858-.08-3.982-.074-6.104-.074c-2.124 0-5.575.799-8.492 3.984c-2.92 3.188-11.148 10.892-11.148 26.561c0 15.67 11.413 30.813 13.004 32.94c1.593 2.123 22.033 35.307 54.405 48.073c26.904 10.609 32.379 8.499 38.218 7.967c5.84-.53 18.844-7.702 21.497-15.139c2.655-7.436 2.655-13.81 1.859-15.142c-.796-1.327-2.92-2.124-6.105-3.716c-3.186-1.593-18.844-9.298-21.763-10.361c-2.92-1.062-5.043-1.592-7.167 1.597c-2.124 3.184-8.223 10.356-10.082 12.48c-1.857 2.129-3.716 2.394-6.9.801c-3.187-1.598-13.444-4.957-25.613-15.806c-9.468-8.442-15.86-18.867-17.718-22.056c-1.858-3.184-.199-4.91 1.398-6.497c1.431-1.427 3.186-3.719 4.78-5.578c1.588-1.86 2.118-3.187 3.18-5.311c1.063-2.126.531-3.986-.264-5.579c-.798-1.593-6.987-17.343-9.819-23.64" />
-                        </svg>
-                    </a>
-                </div>
-            </section>
-        </div>
-
-    </div>
-
+</div>
+</div>
+</div>
+<div id=achievements class="topic-container hidden col-flex centered-flex">
+<h1 class=topic-header>
+Achievements
+</h1>
+<div class="col-flex centered-flex card">
+<p class=centered-flex>Ranked second among my colleagues in Computer Science program Ref.</p>
+<p>Secured first place in a competitive programming contest organized by college programming club Ref.
+</p>
+<p>Ranked 3rd in SQL tournament organized by IAU MIS Committee Ref.</p>
+</div>
+</div>
+<div id=contact class="topic-container hidden col-flex centered-flex">
+<h1 class=topic-header>
+Contact Me
+</h1>
+<section class="col-flex centered-flex width8">
+<h3 class="centered-flex col-flex">
+<p class=centered-flex>
+<span class=material-symbols-outlined>
+call
+</span> <a href=tel:+966548219705>+966548219705</a>
+</p>
+<p class=centered-flex>
+<span class=material-symbols-outlined>
+mail
+</span> <a href=mailto:anaaas26@hotmail.com>anaaas26@hotmail.com</a>
+</p>
+</h3>
+<div class=centered-flex>
+<a href=https://www.linkedin.com/in/anas-eshtaiwi/ class=centered-flex>
+<svg xmlns=http://www.w3.org/2000/svg width=128 height=128 viewBox="0 0 128 128">
+<path fill=#0076b2 d="M116 3H12a8.91 8.91 0 0 0-9 8.8v104.42a8.91 8.91 0 0 0 9 8.78h104a8.93 8.93 0 0 0 9-8.81V11.77A8.93 8.93 0 0 0 116 3z"/>
+<path fill=#fff d="M21.06 48.73h18.11V107H21.06zm9.06-29a10.5 10.5 0 1 1-10.5 10.49a10.5 10.5 0 0 1 10.5-10.49m20.41 29h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75v32H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53z"/>
+</svg>
+</a>
+<a href=https://github.com/anasesh class=centered-flex><svg xmlns=http://www.w3.org/2000/svg width=128 height=128 viewBox="0 0 128 128">
+<g fill=#181616>
+<path fill-rule=evenodd d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388c0 26.682 17.303 49.317 41.297 57.303c3.017.56 4.125-1.31 4.125-2.905c0-1.44-.056-6.197-.082-11.243c-16.8 3.653-20.345-7.125-20.345-7.125c-2.747-6.98-6.705-8.836-6.705-8.836c-5.48-3.748.413-3.67.413-3.67c6.063.425 9.257 6.223 9.257 6.223c5.386 9.23 14.127 6.562 17.573 5.02c.542-3.903 2.107-6.568 3.834-8.076c-13.413-1.525-27.514-6.704-27.514-29.843c0-6.593 2.36-11.98 6.223-16.21c-.628-1.52-2.695-7.662.584-15.98c0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033c11.526-7.813 16.59-6.19 16.59-6.19c3.287 8.317 1.22 14.46.593 15.98c3.872 4.23 6.215 9.617 6.215 16.21c0 23.194-14.127 28.3-27.574 29.796c2.167 1.874 4.097 5.55 4.097 11.183c0 8.08-.07 14.583-.07 16.572c0 1.607 1.088 3.49 4.148 2.897c23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z" clip-rule=evenodd />
+<path d="M26.484 91.806c-.133.3-.605.39-1.035.185c-.44-.196-.685-.605-.543-.906c.13-.31.603-.395 1.04-.188c.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28c-.396-.42-.47-.983-.177-1.254c.298-.266.844-.14 1.24.28c.394.426.472.984.17 1.255zm2.382 3.477c-.37.258-.976.017-1.35-.52c-.37-.538-.37-1.183.01-1.44c.373-.258.97-.025 1.35.507c.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23c-.527-.487-.674-1.18-.343-1.544c.336-.366 1.045-.264 1.564.23c.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486c-.683-.207-1.13-.76-.99-1.238c.14-.477.823-.7 1.512-.485c.683.206 1.13.756.988 1.237zm4.943.361c.017.498-.563.91-1.28.92c-.723.017-1.308-.387-1.315-.877c0-.503.568-.91 1.29-.924c.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117c-.7.13-1.35-.172-1.44-.653c-.086-.498.422-.997 1.122-1.126c.714-.123 1.354.17 1.444.663zm0 0"/>
+</g>
+</svg></a>
+<a href=https://wa.me/966548219705 class=centered-flex>
+<svg xmlns=http://www.w3.org/2000/svg width=256 height=258 viewBox="0 0 256 258">
+<defs>
+<linearGradient id=logosWhatsappIcon0 x1=50% x2=50% y1=100% y2=0%>
+<stop offset=0% stop-color=#1FAF38 />
+<stop offset=100% stop-color=#60D669 />
+</linearGradient>
+<linearGradient id=logosWhatsappIcon1 x1=50% x2=50% y1=100% y2=0%>
+<stop offset=0% stop-color=#F9F9F9 />
+<stop offset=100% stop-color=#FFF />
+</linearGradient>
+</defs>
+<path fill=url(#logosWhatsappIcon0) d="M5.463 127.456c-.006 21.677 5.658 42.843 16.428 61.499L4.433 252.697l65.232-17.104a122.994 122.994 0 0 0 58.8 14.97h.054c67.815 0 123.018-55.183 123.047-123.01c.013-32.867-12.775-63.773-36.009-87.025c-23.23-23.25-54.125-36.061-87.043-36.076c-67.823 0-123.022 55.18-123.05 123.004"/>
+<path fill=url(#logosWhatsappIcon1) d="M1.07 127.416c-.007 22.457 5.86 44.38 17.014 63.704L0 257.147l67.571-17.717c18.618 10.151 39.58 15.503 60.91 15.511h.055c70.248 0 127.434-57.168 127.464-127.423c.012-34.048-13.236-66.065-37.3-90.15C194.633 13.286 162.633.014 128.536 0C58.276 0 1.099 57.16 1.071 127.416Zm40.24 60.376l-2.523-4.005c-10.606-16.864-16.204-36.352-16.196-56.363C22.614 69.029 70.138 21.52 128.576 21.52c28.3.012 54.896 11.044 74.9 31.06c20.003 20.018 31.01 46.628 31.003 74.93c-.026 58.395-47.551 105.91-105.943 105.91h-.042c-19.013-.01-37.66-5.116-53.922-14.765l-3.87-2.295l-40.098 10.513l10.706-39.082Z"/>
+<path fill=#FFF d="M96.678 74.148c-2.386-5.303-4.897-5.41-7.166-5.503c-1.858-.08-3.982-.074-6.104-.074c-2.124 0-5.575.799-8.492 3.984c-2.92 3.188-11.148 10.892-11.148 26.561c0 15.67 11.413 30.813 13.004 32.94c1.593 2.123 22.033 35.307 54.405 48.073c26.904 10.609 32.379 8.499 38.218 7.967c5.84-.53 18.844-7.702 21.497-15.139c2.655-7.436 2.655-13.81 1.859-15.142c-.796-1.327-2.92-2.124-6.105-3.716c-3.186-1.593-18.844-9.298-21.763-10.361c-2.92-1.062-5.043-1.592-7.167 1.597c-2.124 3.184-8.223 10.356-10.082 12.48c-1.857 2.129-3.716 2.394-6.9.801c-3.187-1.598-13.444-4.957-25.613-15.806c-9.468-8.442-15.86-18.867-17.718-22.056c-1.858-3.184-.199-4.91 1.398-6.497c1.431-1.427 3.186-3.719 4.78-5.578c1.588-1.86 2.118-3.187 3.18-5.311c1.063-2.126.531-3.986-.264-5.579c-.798-1.593-6.987-17.343-9.819-23.64"/>
+</svg>
+</a>
+</div>
+</section>
+</div>
+</div>
 </body>
-<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-<script src="supplies/js/functions.js"></script>
-<script src="supplies/js/main.js"></script>
-<script src="supplies/js/projects.js"></script>
-
+<script src=https://unpkg.com/swiper@8/swiper-bundle.min.js></script>
+<script src=supplies/js/functions.js></script>
+<script src=supplies/js/main.js></script>
+<script src=supplies/js/projects.js></script>
 </html>
