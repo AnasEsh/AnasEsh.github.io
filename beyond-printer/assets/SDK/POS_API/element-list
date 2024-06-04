@@ -1,0 +1,17 @@
+com.trendit.basesdk
+com.trendit.basesdk.card
+com.trendit.basesdk.device.beeper
+com.trendit.basesdk.device.emv
+com.trendit.basesdk.device.hsm
+com.trendit.basesdk.device.icc
+com.trendit.basesdk.device.led
+com.trendit.basesdk.device.msr
+com.trendit.basesdk.device.picc
+com.trendit.basesdk.device.pinpad
+com.trendit.basesdk.device.printer
+com.trendit.basesdk.device.printer.format
+com.trendit.basesdk.device.psam
+com.trendit.basesdk.device.scanner
+com.trendit.basesdk.device.serialport
+com.trendit.basesdk.device.terminal
+com.trendit.basesdk.utils

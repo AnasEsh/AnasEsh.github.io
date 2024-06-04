@@ -1,0 +1,146 @@
+{
+    "sections": {
+        "text_format": {
+            "header": [
+                "Property",
+                "Data Type",
+                "Setter",
+                "Value/Example"
+            ],
+            "properties": [
+                {
+                    "Property": "Font Size",
+                    "Data Type": "Integer",
+                    "Setter": ".fontSize",
+                    "Value/Example": "Any integer, (20 ,30, 35 ..)"
+                },
+                {
+                    "Property": "Alignment",
+                    "Data Type": "Enum of PrintAlign",
+                    "Setter": ".align",
+                    "Value/Example": "PrintAlign.FORMAT_ALIGN_CENTER\nPrintAlign.FORMAT_ALIGN_RIGHT\nPrintAlign.FORMAT_ALIGN_LEFT"
+                },
+                {
+                    "Property": "Bold",
+                    "Data Type": "Boolean",
+                    "Setter": ".isBold",
+                    "Value/Example": "true/false"
+                },
+                {
+                    "Property": "Italic",
+                    "Data Type": "Boolean",
+                    "Setter": ".isItalic",
+                    "Value/Example": "true/false"
+                },
+                {
+                    "Property": "Reversed",
+                    "Data Type": "Boolean",
+                    "Setter": ".isReverse",
+                    "Value/Example": "true/false"
+                },
+                {
+                    "Property": "Line Through",
+                    "Data Type": "Enum of PrintFontLineThrough",
+                    "Setter": ".lineThrough",
+                    "Value/Example": "PrintFontLineThrough.FORMAT_NORMAL\nPrintFontLineThrough.FORMAT_STRIKE_THROUGH\nPrintFontLineThrough.FORMAT_STRIKE_THROUGH_BROKEN\nPrintFontLineThrough.FORMAT_UNDERLINE"
+                }
+            ]
+        },
+        "bitmap_format": {
+            "header": [
+                "Property",
+                "Data Type",
+                "Setter",
+                "Value/Example"
+            ],
+            "properties": [
+                {
+                    "Property": "Width",
+                    "Data Type": "Integer",
+                    "Setter": ".width",
+                    "Value/Example": "Any integer, (150 ,180, 200 ..)"
+                },
+                {
+                    "Property": "Height",
+                    "Data Type": "Integer",
+                    "Setter": ".width",
+                    "Value/Example": "Any integer, (150 ,180, 200 ..)"
+                },
+                {
+                    "Property": "Alignment",
+                    "Data Type": "Enum of PrintAlign",
+                    "Setter": ".align",
+                    "Value/Example": "PrintAlign.FORMAT_ALIGN_CENTER\nPrintAlign.FORMAT_ALIGN_RIGHT\nPrintAlign.FORMAT_ALIGN_LEFT"
+                }
+            ]
+        },
+        "barcode_format": {
+            "header": [
+                "Property",
+                "Data Type",
+                "Setter",
+                "Value/Example"
+            ],
+            "properties": [
+                {
+                    "Property": "BarCode Type",
+                    "Data Type": "Enum of\nPrintBarCodeType",
+                    "Setter": ".barCodeType",
+                    "Value/Example": "BARCODE_TYPE_UPC_A\nBARCODE_TYPE_UPC_E\nBARCODE_TYPE_JAN13\nBARCODE_TYPE_JAN8\nBARCODE_TYPE_CODE39\nBARCODE_TYPE_ITF\nBARCODE_TYPE_CODABAR\nBARCODE_TYPE_CODE93\nBARCODE_TYPE_CODE128"
+                },
+                {
+                    "Property": "HRI Location",
+                    "Data Type": "Enum of\nPrintBarCodeHriLocation",
+                    "Setter": ".hriLocation",
+                    "Value/Example":"FORMAT_BARCODE_HRI_LOCATION_NONE\nFORMAT_BARCODE_HRI_LOCATION_UP\nFORMAT_BARCODE_HRI_LOCATION_DOWN\nFORMAT_BARCODE_HRI_LOCATION_UP_DOWN"
+                },
+                {
+                    "Property": "Width",
+                    "Data Type": "Integer",
+                    "Setter": ".width",
+                    "Value/Example": "Any integer, (150 ,180, 200 ..)"
+                },
+                {
+                    "Property": "Height",
+                    "Data Type": "Integer",
+                    "Setter": ".width",
+                    "Value/Example": "Any integer, (150 ,180, 200 ..)"
+                },
+                {
+                    "Property": "Alignment",
+                    "Data Type": "Enum of PrintAlign",
+                    "Setter": ".align",
+                    "Value/Example": "PrintAlign.FORMAT_ALIGN_CENTER\nPrintAlign.FORMAT_ALIGN_RIGHT\nPrintAlign.FORMAT_ALIGN_LEFT"
+                }
+            ]
+        },
+        "qrcode_format": {
+            "header": [
+                "Property",
+                "Data Type",
+                "Setter",
+                "Value/Example"
+            ],
+            "properties": [
+                {
+                    "Property": "Width",
+                    "Data Type": "Integer",
+                    "Setter": ".width",
+                    "Value/Example": "Any integer, (150 ,180, 200 ..)"
+                },
+                {
+                    "Property": "Height",
+                    "Data Type": "Integer",
+                    "Setter": ".width",
+                    "Value/Example": "Any integer, (150 ,180, 200 ..)"
+                },
+                {
+                    "Property": "Alignment",
+                    "Data Type": "Enum of PrintAlign",
+                    "Setter": ".align",
+                    "Value/Example": "PrintAlign.FORMAT_ALIGN_CENTER\nPrintAlign.FORMAT_ALIGN_RIGHT\nPrintAlign.FORMAT_ALIGN_LEFT"
+                }
+            ]
+        }
+    }
+}

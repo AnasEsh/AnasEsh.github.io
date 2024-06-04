@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>POS printer SDK | Beyond Tech</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta name="description" content="Bootstrap 4 Template For Software Startups">
+	<meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+
+	<!-- FontAwesome JS-->
+	<script defer src="assets/fontawesome/js/all.min.js"></script>
+
+	<!-- Plugins CSS -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+	<link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+
+	<!-- Theme CSS -->
+	<link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+
+	<!-- Tree CSS -->
+	<link rel="stylesheet" href="assets/css/tree.css">
+</head>
+
+<body class="docs-page">
+	<header class="header fixed-top">
+		<div class="branding docs-branding">
+			<div class="container-fluid position-relative py-2">
+				<div class="docs-logo-wrapper">
+					<button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none"
+						type="button">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<div class="site-logo"><a class="navbar-brand" href="https://www.beyond.com.sa"><img
+						width="135"
+						class="logo-icon me-2"
+								src="./assets/images/beyond.png"
+								alt="Beyond Tech"></a>
+					</div>
+				</div>
+				<div class="d-none docs-top-utilities d-flex justify-content-end align-items-center">
+					<div class="top-search-box d-none d-lg-flex">
+						<form class="search-form">
+							<input type="text" placeholder="Search the docs..." name="search"
+								class="form-control search-input">
+							<button type="submit" class="btn search-btn" value="Search"><i
+									class="fas fa-search"></i></button>
+						</form>
+					</div>
+
+					<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+						<li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fab fa-slack fa-fw"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fab fa-product-hunt fa-fw"></i></a></li>
+					</ul>
+					<a href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderdocs-free-bootstrap-5-documentation-template-for-software-projects/"
+						class="btn btn-primary d-none d-lg-flex">Download</a>
+				</div>
+				<!--//docs-top-utilities-->
+			</div><!--//container-->
+		</div><!--//branding-->
+	</header><!--//header-->
+
+	<div class="docs-wrapper">
+		<div id="docs-sidebar" class="docs-sidebar">
+			<div class="top-search-box d-lg-none p-3">
+				<form class="search-form">
+					<input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+					<button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+				</form>
+			</div>
+			<nav id="docs-nav" class="docs-nav navbar">
+				<ul class="section-items list-unstyled nav flex-column pb-3">
+					<li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span
+								class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Introduction</a>
+					</li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#contents">
+							Contents Overview
+						</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#text"><span
+								class="theme-icon-holder me-2"><i class="fas fa-file-text"></i></span>Text</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#text-format">
+							Text Format
+						</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#print-text">
+							printText(format, text)
+						</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#print-multitext">
+							printMultiText(format,left,right)</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#bitmaps"><span
+								class="theme-icon-holder me-2">
+								<i class="fa fa-camera-retro" aria-hidden="true"></i></span>Bitmaps</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#bitmap-format">Bitmap Format</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#print-bitmap">printBitmap(format,bitMap)</a>
+					</li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#barcodes"><span
+								class="theme-icon-holder me-2"><i class="fa fa-barcode"></i></span>Barcodes</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#barcode-format">Barcode Format</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#print-barcode">printBarCode(bcFormat,code)</a>
+					</li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#qr-codes"><span
+								class="theme-icon-holder me-2"><i class="fa fa-qrcode"></i></span>Qr Codes</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-1">
+							QR Format
+						</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-2">Print QR
+						</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#common"><span
+								class="theme-icon-holder me-2"><i class="fas fa-tools"></i></span>Common</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-6-1">
+							onPrintResult(resultCode)
+						</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-6-2">
+							startPrint(onPrintListener)
+						</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#bluetooth-printing"><span
+								class="theme-icon-holder me-2">
+								<i class="fab fa-bluetooth"></i>
+							</span>Bluetooth Printing</a></li>
+
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-8"><span
+								class="theme-icon-holder me-2"><i class="fas fa-book-reader"></i></span>Resources</a>
+					</li>					
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-1">
+						Example project
+					</a>
+					</li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-4">
+							Manufacturer docs
+						</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-2">
+							ESC commands
+						</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-3">
+						SDK library
+					</a></li>
+					<!-- <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-9"><span
+								class="theme-icon-holder me-2"><i class="fas fa-lightbulb"></i></span>FAQs</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-9-1">Section
+							Item 9.1</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-9-2">Section
+							Item 9.2</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-9-3">Section
+							Item 9.3</a></li> -->
+				</ul>
+
+			</nav><!--//docs-nav-->
+		</div><!--//docs-sidebar-->
+		<div class="docs-content mt-5">
+			<div class="container">
+				<article class="docs-article" id="section-1">
+					<header id="contents" class="docs-header">
+						<h1 class="docs-heading">Introduction <span class="docs-time">Last
+								updated: 2024-06-01</span></h1>
+						<section class="docs-intro">
+							<p>This is a simplified version of the manufacturer's printer documentation, with code
+								examples to facilitate printer API usage.</p>
+						</section><!--//docs-intro-->
+
+						<h5>Contents Overview:</h5>
+						<div class="fluid-container d-flex justify-content-center border p-2">
+							<div class="tree">
+								<ul>
+									<li>
+										<a href="#">Printer</a>
+										<ul>
+											<li>
+												<a href="#text">Text</a>
+												<ul>
+													<li>
+														<a href="#text-format">Text Format</a>
+													</li>
+													<li>
+														<a href="#print-text">Text</a>
+													</li>
+													<li>
+														<a href="#print-multitext">Multi Text</a>
+													</li>
+												</ul>
+											</li>
+											<li class="li3">
+												<a href="#bitmaps">Bitmap</a>
+												<ul>
+													<li>
+														<a href="#bitmap-format">Bitmap Format</a>
+													</li>
+													<li>
+														<a href="#print-bitmap">Print Bitmap</a>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<a href="#barcodes">Barcode</a>
+												<ul>
+													<li>
+														<a href="#barcode-format">Barcode Format</a>
+													</li>
+													<li>
+														<a href="#print-barcode">Print Barcode</a>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+
+						</div>
+					</header>
+
+				</article>
+
+				<article class="docs-article" id="text">
+					<header class="docs-header">
+						<h1 class="docs-heading">Text</h1>
+						<section class="docs-intro">
+							<p>Printing text and related options listed in this section</p>
+						</section><!--//docs-intro-->
+					</header>
+					<section class="docs-section" id="text-format">
+						<h2 class="section-heading">Text Format</h2>
+						<p>Text Format is a utility class used to format printed text, it must be provided to text
+							printing methods.</p>
+
+						<div class="accordion" id="accordionPanelsStayOpenExample">
+							<div class="accordion-item">
+								<h2 class="accordion-header fw-bold" id="panelsStayOpen-headingOne">
+									<button class="accordion-button collapsed bg-transparent" type="button"
+										data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne">
+										Properties
+									</button>
+								</h2>
+								<div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse"
+									aria-labelledby="panelsStayOpen-headingOne">
+									<div class="accordion-body p-0">
+										<div class="table-responsive m-0">
+											<table data-sectionName="text_format"
+												class="h6 fw-light table table-bordered align-middle">
+												<thead></thead>
+												<tbody></tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="accordion-item">
+								<h2 class="accordion-header" id="panelsStayOpen-headingThree">
+									<button class="accordion-button bg-transparent" type="button"
+										data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
+										aria-expanded="true" aria-controls="panelsStayOpen-collapseThree">
+										Example
+									</button>
+								</h2>
+								<div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse show"
+									aria-labelledby="panelsStayOpen-headingThree">
+									<div class="accordion-body text-bg-dark">
+
+										<code>
+												val format= TextFormat();
+												<br>
+												format.fontSize=35;
+												<br>
+												format.align= PrintAlign.FORMAT_ALIGN_CENTER;
+												<br>
+												format.isBold=true;
+										</code>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</section><!--//section-->
+
+					<section class="docs-section" id="print-text">
+						<h2 class="section-heading">
+							printText(<a href="#text-format">TextFormat</a> format, String text) → void
+						</h2>
+						<p>Used to add line of text to print, given the format and string.</p>
+						<h5>
+							Example
+						</h5>
+						<div class="text-bg-dark">
+							<code>
+								printText(defaultTextFormat, "Example String")
+						</code>
+						</div>
+					</section><!--//section-->
+
+					<section class="docs-section" id="print-multitext">
+						<h2 class="section-heading">
+							printMultiText(<a href="#text-format">TextFormat</a> format, String left, String right) → void
+						</h2>
+						<p>Used to add left and right aligned text in the same line.</p>
+						<h5>
+							Example
+						</h5>
+						<div class="text-bg-dark">
+							<code>
+								printMultiText(defaultTextFormat, "left Str","right Str")
+						</code>
+						</div>
+					</section><!--//section-->
+				</article><!--//docs-article-->
+
+				<article class="docs-article" id="bitmaps">
+					<header class="docs-header">
+						<h1 class="docs-heading">Bitmap</h1>
+						<section class="docs-intro">
+							<p>This section describes the format and commonly used methods to print bitmaps</p>
+						</section><!--//docs-intro-->
+					</header>
+					<section class="docs-section" id="bitmap-format">
+						<h2 class="section-heading">Bitmap Format</h2>
+						<p>utility class that can be used to configure the format in which the image will be printed,
+							like width, height, alignment and more.</p>
+						<div class="accordion" id="accordionPanelsStayOpenExample">
+							<div class="accordion-item">
+								<h2 class="accordion-header fw-bold" id="panelsStayOpen-headingOne">
+									<button class="accordion-button collapsed bg-transparent" type="button"
+										data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne">
+										Properties
+									</button>
+								</h2>
+								<div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse"
+									aria-labelledby="panelsStayOpen-headingOne">
+									<div class="accordion-body p-0">
+										<div class="table-responsive m-0">
+											<table data-sectionName="bitmap_format"
+												class="h6 fw-light table table-bordered align-middle">
+												<thead></thead>
+												<tbody></tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="accordion-item">
+								<h2 class="accordion-header" id="panelsStayOpen-headingThree">
+									<button class="accordion-button bg-transparent" type="button"
+										data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
+										aria-expanded="true" aria-controls="panelsStayOpen-collapseThree">
+										Example
+									</button>
+								</h2>
+								<div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse show"
+									aria-labelledby="panelsStayOpen-headingThree">
+									<div class="accordion-body text-bg-dark">
+
+										<code>
+											val bitmapFormat=BitmapFormat();
+											<br>
+											bitmapFormat.align=PrintAlign.FORMAT_ALIGN_CENTER;
+											<br>
+											bitmapFormat.width=(image.width*1.1).toInt();
+											<br>
+											bitmapFormat.height=(image.height*1.1).toInt();
+										</code>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</section><!--//section-->
+
+					<section class="docs-section" id="print-bitmap">
+						<h2 class="section-heading">printBitmap(<a href="#bitmap-format">BitmapFormat</a> format, Bitmap
+							bitmapImage) → void</h2>
+						<p>Used to print bitmap images, given the bitmap format and the image itself</p>
+						<h5>
+							Example
+						</h5>
+						<div class="text-bg-dark">
+							<code>
+								POSDeviceManager.getInstance().printerDevice.apply {
+									<br>
+									val format=BitmapFormat();
+									<br>
+									format.align=PrintAlign.FORMAT_ALIGN_CENTER;
+									<br>
+									format.width=(image.width*1.1).toInt();
+									<br>
+									format.height=(image.height*1.1).toInt();
+									<br>
+									printText(defaultTextFormat,"\n");
+									<br>
+									printBitmap(format,image);
+									<br>
+									cutPaper();
+									<br>
+									startPrint(onPrintListener);
+									<br>
+								}
+							</code>
+						</div>
+					</section>
+				</article><!--//docs-article-->
+
+				<article class="docs-article" id="barcodes">
+					<header class="docs-header">
+						<h1 class="docs-heading">Barcode</h1>
+						<section class="docs-intro">
+							<p>Used to print any barcode, like product barcodes, supporting all common barcode formats.
+							</p>
+						</section><!--//docs-intro-->
+					</header>
+					<section class="docs-section" id="barcode-format">
+						<h2 class="section-heading">BarCode Format</h2>
+						<p>
+							Formats the printed barcodes, configures which barcode type to use, used Human Readable
+							Interpretation(HRI), width, height and alignment.
+
+						</p>
+						<div class="accordion" id="accordionPanelsStayOpenExample">
+							<div class="accordion-item">
+								<h2 class="accordion-header fw-bold" id="panelsStayOpen-headingOne">
+									<button class="accordion-button collapsed bg-transparent" type="button"
+										data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne">
+										Properties
+									</button>
+								</h2>
+								<div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse"
+									aria-labelledby="panelsStayOpen-headingOne">
+									<div class="accordion-body p-0">
+										<div class="table-responsive m-0">
+											<table data-sectionName="barcode_format"
+												class="h6 fw-light table table-bordered align-middle">
+												<thead></thead>
+												<tbody></tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="accordion-item">
+								<h2 class="accordion-header" id="panelsStayOpen-headingThree">
+									<button class="accordion-button bg-transparent" type="button"
+										data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
+										aria-expanded="true" aria-controls="panelsStayOpen-collapseThree">
+										Example
+									</button>
+								</h2>
+								<div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse show"
+									aria-labelledby="panelsStayOpen-headingThree">
+									<div class="accordion-body text-bg-dark">
+
+										<code><pre>val codeFormat=BarCodeFormat();
+codeFormat.barCodeType=PrintBarCodeType.BARCODE_TYPE_CODE128;
+codeFormat.align=PrintAlign.FORMAT_ALIGN_CENTER;
+codeFormat.hriLocation=PrintBarCodeHriLocation.FORMAT_BARCODE_HRI_LOCATION_DOWN;
+codeFormat.height=180;
+codeFormat.width=300;</pre></code>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</section><!--//section-->
+
+					<section class="docs-section" id="print-barcode">
+						<h2 class="section-heading">printBarCode(<a href="#barcode-format">BarCodeFormat</a> format, String
+							code) → void</h2>
+						<p>Used to print barcodes with the specified format and code value</p>
+						<h5>
+							Example
+						</h5>
+						<div class="text-bg-dark">
+							<code><pre>POSDeviceManager.getInstance().printerDevice.apply {
+	val format=BarCodeFormat();
+	format.barCodeType=PrintBarCodeType.BARCODE_TYPE_CODE128;
+	format.align=PrintAlign.FORMAT_ALIGN_CENTER;
+	format.hriLocation=PrintBarCodeHriLocation.FORMAT_BARCODE_HRI_LOCATION_DOWN;
+	printBarCode(format,productCode);
+	printText(defaultTextFormat,"\n \n \n")
+	cutPaper();
+	startPrint(onPrintListener);
+}</pre></code>
+						</div>
+					</section><!--//section-->
+				</article><!--//docs-article-->
+
+				<article class="docs-article" id="qr-codes">
+					<header class="docs-header">
+						<h1 class="docs-heading">Qr Codes</h1>
+						<section class="docs-intro">
+							<p>QR codes can encode a variety of data types including URLs, phone numbers, and other
+								strings.
+								<br>
+								For the best results, specify the appropriate resolver scheme, such as https:// for web
+								links or tel: for phone numbers, mailto ...
+								<br>
+								<a href="https://stackoverflow.com/a/26738158/20077307">Common Schemes</a>
+							</p>
+						</section><!--//docs-intro-->
+					</header>
+					<section class="docs-section" id="item-5-1">
+						<h2 class="section-heading">QrCode Format</h2>
+						<p>
+							Used for general formatting of the printed QR codes.
+
+						</p>
+						<div class="accordion" id="accordionPanelsStayOpenExample">
+							<div class="accordion-item">
+								<h2 class="accordion-header fw-bold" id="panelsStayOpen-headingOne">
+									<button class="accordion-button collapsed bg-transparent" type="button"
+										data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne">
+										Properties
+									</button>
+								</h2>
+								<div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse"
+									aria-labelledby="panelsStayOpen-headingOne">
+									<div class="accordion-body p-0">
+										<div class="table-responsive m-0">
+											<table data-sectionName="qrcode_format"
+												class="h6 fw-light table table-bordered align-middle">
+												<thead></thead>
+												<tbody></tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="accordion-item">
+								<h2 class="accordion-header" id="panelsStayOpen-headingThree">
+									<button class="accordion-button bg-transparent" type="button"
+										data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
+										aria-expanded="true" aria-controls="panelsStayOpen-collapseThree">
+										Example
+									</button>
+								</h2>
+								<div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse show"
+									aria-labelledby="panelsStayOpen-headingThree">
+									<div class="accordion-body text-bg-dark">
+										<code><pre>val qrFormat=QrCodeFormat();
+qrFormat.height=200;
+qrFormat.width=200;
+qrFormat.align=PrintAlign.FORMAT_ALIGN_CENTER;</pre></code>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section><!--//section-->
+					(qrFormat,text)
+					<section class="docs-section" id="item-5-2">
+						<h2 class="section-heading">printQrCode(<a href="#item-5-1">QrCodeFormat</a> format, String
+							content) → void</h2>
+						<p>Used to print qr code with the specified format and content value</p>
+						<h5>
+							Example
+						</h5>
+						<div class="text-bg-dark">
+							<code><pre>POSDeviceManager.getInstance().printerDevice.apply {
+val qrFormat=QrCodeFormat();
+qrFormat.height=200;
+qrFormat.width=200;
+qrFormat.align=PrintAlign.FORMAT_ALIGN_CENTER;
+printQrCode(qrFormat,"https://beyond.com.sa/");
+printText(defaultTextFormat,"\n\n\n");
+cutPaper();
+startPrint(onPrintListener);
+}</pre></code>
+						</div>
+					</section><!--//section-->
+				</article><!--//docs-article-->
+
+				<article class="docs-article" id="common">
+					<header class="docs-header">
+						<h1 class="docs-heading">Common methods</h1>
+						<section class="docs-intro">
+							<p>This section describes common functionalities needed while printing any of the supported
+								formats
+								<br>
+								<a href="#item-6-1">print result</a> is passed as a callback when sending print request
+								using <a href="#item-6-2">startPrint(listener)</a> which is required to send any
+								printing request
+							</p>
+						</section><!--//docs-intro-->
+					</header>
+					<section class="docs-section" id="item-6-1">
+						<h2 class="section-heading">Abstract OnPrintTaskListener()</h2>
+						<p>Abstract class with one member method, onPrintResult(resultCode)</p>
+						<h5>
+							Example
+						</h5>
+						<div class="text-bg-dark">
+							<code><pre>val onPrintListener=object: OnPrintTaskListener(){
+override fun onPrintResult(p0: Int) {
+	when(p0){
+		PrinterConstants.TASK_STATUS_ERR -> Log.e("Print result", "Error");
+		PrinterConstants.TASK_STATUS_CANCEL -> Log.i("Print result", "Cancelled");
+		PrinterConstants.TASK_STATUS_FAIL -> Log.e("Print result", "Failed");
+		PrinterConstants.TASK_STATUS_SUCCESS -> Log.i("Print result", "Success");
+		PrinterConstants.TASK_STATUS_OUT_OF_PAPER -> Log.e("Print result", "Out of paper");
+		PrinterConstants.TASK_STATUS_OVER_HEAT -> Log.e("Print result", "Overheated");
+		PrinterConstants.TASK_STATUS_LOW_POWER -> Log.e("Print result", "Low dev power");
+		else ->Log.i("Print result","Unknown state");
+	}
+	Log.i("Print result int is",p0.toString());
+}
+};</pre></code>
+						</div>
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-6-2">
+						<h2 class="section-heading">startPrint(<a href="#item-6-1">OnPrintTaskListener</a> listener) →
+							void</h2>
+						<p>Mandatory to send and execute any printing request</p>
+						<h5>
+							Example
+						</h5>
+						<div class="text-bg-dark">
+							<code><pre>POSDeviceManager.getInstance().printerDevice.apply {
+startPrint(<a href="#item-6-1">onPrintListener</a>);
+}</pre></code>
+						</div>
+					</section>
+
+				</article><!--//docs-article-->
+<article class="docs-article" id="bluetooth-printing">
+					<header class="docs-header">
+						<h1 class="docs-heading">Bluetooth Printing</h1>
+						<section class="docs-intro">
+							<p>
+							The device supports sending commands to the printer over Bluetooth, which is useful especially when using the printer from cross-platform programming frameworks. 
+							<br>
+							Most frameworks provide libraries that handle sending commands to the printer via Bluetooth.
+							<p class="lead">What is ESC?</p>
+							<ul>
+							<a href="#item-8-2">ESC commands</a>
+							</ul>
+							</p>
+						</section><!--//docs-intro-->
+					</header>
+
+				</article>
+				<article class="docs-article" id="section-8">
+					<header class="docs-header">
+						<h1 class="docs-heading">Resources</h1>
+						<section class="docs-intro">
+							<p>This supplementary documentation provides additional resources to help you get the most
+								out of the printer SDK. While the main documentation covers the basics, this section
+								includes extra information and guidance to further assist you.</p>
+						</section><!--//docs-intro-->
+					</header>
+					<section class="docs-section" id="item-8-1">
+						<h2 class="section-heading">Example Application</h2>
+						<p>Application to try out the printer services. You can download the source code (Kotlin) <a href="https://github.com/AnasEsh/s680_printer">here</a></p>
+					<img src="assets/images/app_pic.jpeg" width="300" alt="" srcset="">
+					</section>
+					<section class="docs-section" id="item-8-4">
+						<h2 class="section-heading">Manufacturer documentation</h2>
+						<p>you can find the full printer documentation <a href="assets/SDK/POS_API/index.html">here</a></p>
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-8-2">
+						<h2 class="section-heading">ESC commands</h2>
+						<p>
+							ESC (Escape) commands refer to a set of printer control codes that use the Escape character
+							to trigger special functionality. These commands allow you to access advanced printer
+							features and perform low-level control operations, such as:
+						<ul>
+							<li>Changing printer settings like font, text size, and orientation</li>
+							<li>Enabling or disabling specific printer features</li>
+							<li>Sending direct control sequences to the printer</li>
+							<li>Querying printer status and retrieving diagnostic information</li>
+							<li>Managing paper handling and cutting</li>
+							<li>Performing printer calibration and maintenance</li>
+						</ul>
+						</p>
+						<p class="lead">More</p>
+						<ul>
+							<li>Use sendESCCommand(byte[] esc)</li>
+							<li><a href="https://3nstar.com/wp-content/uploads/2023/07/RPT001-Programming-Manual.pdf">ESC
+									standard documentation</a></li>
+						</ul>
+						<div class="alert alert-success d-flex gap-2 align-items-center" role="alert">
+							<i class="fa fa-info-circle fa-2x" aria-hidden="true"></i>
+							<div class="vr"></div> In most cases you dont need to deal with plain ESC commands, and
+							depending on the used framework you will find a library that helps by providing high level
+							methods that handles ESC commands for you
+						</div>
+					</section>
+					<section class="docs-section" id="item-8-3">
+						<h2 class="section-heading">SDK library</h2>
+						<p>
+							<a href="./assets/SDK/basesdk-sources.jar">Download the SDK library file</a>
+						</p>
+					</section>
+					<!--//section-->
+				</article><!--//docs-article-->
+
+				<!-- <article class="docs-article" id="section-9">
+					<header class="docs-header">
+						<h1 class="docs-heading">FAQs</h1>
+						<section class="docs-intro">
+							<p>Section intro goes here. You can list all your FAQs using the format
+								below.</p>
+						</section>
+					</header>
+					<section class="docs-section" id="item-9-1">
+						<h2 class="section-heading">Section Item 9.1 <small>(FAQ Category
+								One)</small></h2>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>What's sit
+							amet quam eget lacinia?</h5>
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+							commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et
+							magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+							ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+							quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
+							arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+							Nullam dictum felis eu pede mollis pretium.</p>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>How to ipsum
+							dolor sit amet quam tortor?</h5>
+						<p>Donec sodales sagittis magna. Sed consequat, leo eget bibendum
+							sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce
+							vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis
+							sed, nonummy id, metus. Nullam accumsan lorem in dui. </p>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Can I
+							bibendum sodales?</h5>
+						<p>Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque
+							ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. </p>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Where arcu
+							sed urna gravida?</h5>
+						<p>Aenean et sodales nisi, vel efficitur sapien. Quisque molestie diam
+							libero, et elementum diam mollis ac. In dignissim aliquam est eget
+							ullamcorper. Sed id sodales tortor, eu finibus leo. Vivamus dapibus
+							sollicitudin justo vel fermentum. Curabitur nec arcu sed urna gravida
+							lobortis. Donec lectus est, imperdiet eu viverra viverra, ultricies nec
+							urna. </p>
+					</section>
+
+					<section class="docs-section" id="item-9-2">
+						<h2 class="section-heading">Section Item 9.2 <small>(FAQ Category
+								Two)</small></h2>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>What's sit
+							amet quam eget lacinia?</h5>
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+							commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et
+							magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+							ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+							quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
+							arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+							Nullam dictum felis eu pede mollis pretium.</p>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>How to ipsum
+							dolor sit amet quam tortor?</h5>
+						<p>Donec sodales sagittis magna. Sed consequat, leo eget bibendum
+							sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce
+							vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis
+							sed, nonummy id, metus. Nullam accumsan lorem in dui. </p>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Can I
+							bibendum sodales?</h5>
+						<p>Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque
+							ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. </p>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Where arcu
+							sed urna gravida?</h5>
+						<p>Aenean et sodales nisi, vel efficitur sapien. Quisque molestie diam
+							libero, et elementum diam mollis ac. In dignissim aliquam est eget
+							ullamcorper. Sed id sodales tortor, eu finibus leo. Vivamus dapibus
+							sollicitudin justo vel fermentum. Curabitur nec arcu sed urna gravida
+							lobortis. Donec lectus est, imperdiet eu viverra viverra, ultricies nec
+							urna. </p>
+					</section>
+
+					<section class="docs-section" id="item-9-3">
+						<h2 class="section-heading">Section Item 9.3 <small>(FAQ Category
+								Three)</small></h2>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>How to
+							dapibus sollicitudin justo vel fermentum?</h5>
+						<p>Donec sodales sagittis magna. Sed consequat, leo eget bibendum
+							sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce
+							vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis
+							sed, nonummy id, metus. Nullam accumsan lorem in dui. </p>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>How long
+							bibendum sodales?</h5>
+						<p>Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque
+							ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. </p>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Where dapibus
+							sollicitudin?</h5>
+						<p>Aenean et sodales nisi, vel efficitur sapien. Quisque molestie diam
+							libero, et elementum diam mollis ac. In dignissim aliquam est eget
+							ullamcorper. Sed id sodales tortor, eu finibus leo. Vivamus dapibus
+							sollicitudin justo vel fermentum. Curabitur nec arcu sed urna gravida
+							lobortis. Donec lectus est, imperdiet eu viverra viverra, ultricies nec
+							urna. </p>
+					</section>
+				</article> -->
+
+				<footer class="footer">
+					<div class="container text-center py-5">
+						<!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+						<small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart"
+								style="color: #fb866a;"></i> by <a class="theme-link"
+								href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying
+								Riley</a> for developers</small>
+						<!-- <ul class="social-list list-unstyled pt-4 mb-0">
+							<li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li>
+							<li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
+							<li class="list-inline-item"><a href="#"><i class="fab fa-slack fa-fw"></i></a></li>
+							<li class="list-inline-item"><a href="#"><i class="fab fa-product-hunt fa-fw"></i></a></li>
+							<li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f fa-fw"></i></a></li>
+							<li class="list-inline-item"><a href="#"><i class="fab fa-instagram fa-fw"></i></a></li>
+						</ul> -->
+						<!--//social-list-->
+					</div>
+				</footer>
+			</div>
+		</div>
+	</div><!--//docs-wrapper-->
+
+	<!-- Javascript -->
+	<script src="assets/plugins/popper.min.js"></script>
+	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Page Specific JS -->
+	<script src="./assets/js/properties_populate.js"></script>
+	<script src="assets/plugins/smoothscroll.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+	<script src="assets/js/highlight-custom.js"></script>
+	<script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
+	<script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+	<script src="assets/js/docs.js"></script>
+
+</body>
+
+</html>
