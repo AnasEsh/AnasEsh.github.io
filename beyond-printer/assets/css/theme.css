@@ -11833,7 +11833,6 @@ a.text-link:hover {
 .docs-logo-wrapper {
     position: absolute;
     left: 15px;
-    top: 0.5rem;
 }
 .docs-logo-wrapper .site-logo {
     display: inline-block;

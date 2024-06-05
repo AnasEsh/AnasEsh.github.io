@@ -33,7 +33,7 @@
 <body class="docs-page">
 	<header class="header fixed-top">
 		<div class="branding docs-branding">
-			<div class="container-fluid position-relative py-2">
+			<div class="container-fluid position-relative">
 				<div class="docs-logo-wrapper">
 					<button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none"
 						type="button">
@@ -41,11 +41,8 @@
 						<span></span>
 						<span></span>
 					</button>
-					<div class="site-logo"><a class="navbar-brand" href="https://www.beyond.com.sa"><img
-						width="135"
-						class="logo-icon me-2"
-								src="./assets/images/beyond.png"
-								alt="Beyond Tech"></a>
+					<div class="site-logo"><a class="navbar-brand" href="https://www.beyond.com.sa"><img width="135"
+								class="logo-icon me-2" src="./assets/images/beyond.png" alt="Beyond Tech"></a>
 					</div>
 				</div>
 				<div class="d-none docs-top-utilities d-flex justify-content-end align-items-center">
@@ -102,16 +99,18 @@
 								class="theme-icon-holder me-2">
 								<i class="fa fa-camera-retro" aria-hidden="true"></i></span>Bitmaps</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#bitmap-format">Bitmap Format</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#print-bitmap">printBitmap(format,bitMap)</a>
+					<li class="nav-item"><a class="nav-link scrollto"
+							href="#print-bitmap">printBitmap(format,bitMap)</a>
 					</li>
 					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#barcodes"><span
 								class="theme-icon-holder me-2"><i class="fa fa-barcode"></i></span>Barcodes</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#barcode-format">Barcode Format</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#print-barcode">printBarCode(bcFormat,code)</a>
+					<li class="nav-item"><a class="nav-link scrollto"
+							href="#print-barcode">printBarCode(bcFormat,code)</a>
 					</li>
-					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#qr-codes"><span
-								class="theme-icon-holder me-2"><i class="fa fa-qrcode"></i></span>Qr Codes</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-1">
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#qrcodes"><span
+								class="theme-icon-holder me-2"><i class="fa fa-qrcode"></i></span>QR Codes</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#qrcode-format">
 							QR Format
 						</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-2">Print QR
@@ -124,17 +123,17 @@
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-6-2">
 							startPrint(onPrintListener)
 						</a></li>
-					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#bluetooth-printing"><span
-								class="theme-icon-holder me-2">
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto"
+							href="#bluetooth-printing"><span class="theme-icon-holder me-2">
 								<i class="fab fa-bluetooth"></i>
 							</span>Bluetooth Printing</a></li>
 
 					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-8"><span
 								class="theme-icon-holder me-2"><i class="fas fa-book-reader"></i></span>Resources</a>
-					</li>					
+					</li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-1">
-						Example project
-					</a>
+							Example project
+						</a>
 					</li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-4">
 							Manufacturer docs
@@ -143,8 +142,8 @@
 							ESC commands
 						</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-3">
-						SDK library
-					</a></li>
+							SDK library
+						</a></li>
 					<!-- <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-9"><span
 								class="theme-icon-holder me-2"><i class="fas fa-lightbulb"></i></span>FAQs</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-9-1">Section
@@ -169,7 +168,7 @@
 						</section><!--//docs-intro-->
 
 						<h5>Contents Overview:</h5>
-						<div class="fluid-container d-flex justify-content-center border p-2">
+						<div class="toty fluid-container d-flex flex-column align-items-center justify-content-center border p-2">
 							<div class="tree">
 								<ul>
 									<li>
@@ -200,6 +199,18 @@
 													</li>
 												</ul>
 											</li>
+											<br>
+											<li>
+												<a href="#qrcodes">QR code</a>
+												<ul>
+													<li>
+														<a href="#qrcode-format">QR Format</a>
+													</li>
+													<li>
+														<a href="#print-qrcode">Print QR code</a>
+													</li>
+												</ul>
+											</li>
 											<li>
 												<a href="#barcodes">Barcode</a>
 												<ul>
@@ -214,8 +225,35 @@
 										</ul>
 									</li>
 								</ul>
-							</div>
 
+
+							</div>
+								<!-- <div class="tree">
+									<ul>
+										<li>
+											<a href="#barcodes">Barcode</a>
+											<ul>
+												<li>
+													<a href="#barcode-format">Barcode Format</a>
+												</li>
+												<li>
+													<a href="#print-barcode">Print Barcode</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="#barcodes">Barcode</a>
+											<ul>
+												<li>
+													<a href="#barcode-format">Barcode Format</a>
+												</li>
+												<li>
+													<a href="#print-barcode">Print Barcode</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div> -->
 						</div>
 					</header>
 
@@ -300,7 +338,8 @@
 
 					<section class="docs-section" id="print-multitext">
 						<h2 class="section-heading">
-							printMultiText(<a href="#text-format">TextFormat</a> format, String left, String right) → void
+							printMultiText(<a href="#text-format">TextFormat</a> format, String left, String right) →
+							void
 						</h2>
 						<p>Used to add left and right aligned text in the same line.</p>
 						<h5>
@@ -471,7 +510,8 @@ codeFormat.width=300;</pre></code>
 					</section><!--//section-->
 
 					<section class="docs-section" id="print-barcode">
-						<h2 class="section-heading">printBarCode(<a href="#barcode-format">BarCodeFormat</a> format, String
+						<h2 class="section-heading">printBarCode(<a href="#barcode-format">BarCodeFormat</a> format,
+							String
 							code) → void</h2>
 						<p>Used to print barcodes with the specified format and code value</p>
 						<h5>
@@ -492,9 +532,9 @@ codeFormat.width=300;</pre></code>
 					</section><!--//section-->
 				</article><!--//docs-article-->
 
-				<article class="docs-article" id="qr-codes">
+				<article class="docs-article" id="qrcodes">
 					<header class="docs-header">
-						<h1 class="docs-heading">Qr Codes</h1>
+						<h1 class="docs-heading">QR Codes</h1>
 						<section class="docs-intro">
 							<p>QR codes can encode a variety of data types including URLs, phone numbers, and other
 								strings.
@@ -506,8 +546,8 @@ codeFormat.width=300;</pre></code>
 							</p>
 						</section><!--//docs-intro-->
 					</header>
-					<section class="docs-section" id="item-5-1">
-						<h2 class="section-heading">QrCode Format</h2>
+					<section class="docs-section" id="qrcode-format">
+						<h2 class="section-heading">QRCode Format</h2>
 						<p>
 							Used for general formatting of the printed QR codes.
 
@@ -555,8 +595,8 @@ qrFormat.align=PrintAlign.FORMAT_ALIGN_CENTER;</pre></code>
 						</div>
 					</section><!--//section-->
 					(qrFormat,text)
-					<section class="docs-section" id="item-5-2">
-						<h2 class="section-heading">printQrCode(<a href="#item-5-1">QrCodeFormat</a> format, String
+					<section class="docs-section" id="print-qrcode">
+						<h2  class="section-heading">printQrCode(<a href="#qrcode-format">QrCodeFormat</a> format, String
 							content) → void</h2>
 						<p>Used to print qr code with the specified format and content value</p>
 						<h5>
@@ -630,17 +670,19 @@ startPrint(<a href="#item-6-1">onPrintListener</a>);
 					</section>
 
 				</article><!--//docs-article-->
-<article class="docs-article" id="bluetooth-printing">
+				<article class="docs-article" id="bluetooth-printing">
 					<header class="docs-header">
 						<h1 class="docs-heading">Bluetooth Printing</h1>
 						<section class="docs-intro">
 							<p>
-							The device supports sending commands to the printer over Bluetooth, which is useful especially when using the printer from cross-platform programming frameworks. 
-							<br>
-							Most frameworks provide libraries that handle sending commands to the printer via Bluetooth.
+								The device supports sending commands to the printer over Bluetooth, which is useful
+								especially when using the printer from cross-platform programming frameworks.
+								<br>
+								Most frameworks provide libraries that handle sending commands to the printer via
+								Bluetooth.
 							<p class="lead">What is ESC?</p>
 							<ul>
-							<a href="#item-8-2">ESC commands</a>
+								<a href="#item-8-2">ESC commands</a>
 							</ul>
 							</p>
 						</section><!--//docs-intro-->
@@ -658,12 +700,14 @@ startPrint(<a href="#item-6-1">onPrintListener</a>);
 					</header>
 					<section class="docs-section" id="item-8-1">
 						<h2 class="section-heading">Example Application</h2>
-						<p>Application to try out the printer services. You can download the source code (Kotlin) <a href="https://github.com/AnasEsh/s680_printer">here</a></p>
-					<img src="assets/images/app_pic.jpeg" width="300" alt="" srcset="">
+						<p>Application to try out the printer services. You can download the source code (Kotlin) <a
+								href="https://github.com/AnasEsh/s680_printer">here</a></p>
+						<img src="assets/images/app_pic.jpeg" width="300" alt="" srcset="">
 					</section>
 					<section class="docs-section" id="item-8-4">
 						<h2 class="section-heading">Manufacturer documentation</h2>
-						<p>you can find the full printer documentation <a href="assets/SDK/POS_API/index.html">here</a></p>
+						<p>you can find the full printer documentation <a href="assets/SDK/POS_API/index.html">here</a>
+						</p>
 					</section><!--//section-->
 
 					<section class="docs-section" id="item-8-2">
