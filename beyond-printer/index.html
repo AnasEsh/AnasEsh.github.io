@@ -45,24 +45,13 @@
 								class="logo-icon me-2" src="./assets/images/beyond.png" alt="Beyond Tech"></a>
 					</div>
 				</div>
-				<div class="d-none docs-top-utilities d-flex justify-content-end align-items-center">
-					<div class="top-search-box d-none d-lg-flex">
-						<form class="search-form">
-							<input type="text" placeholder="Search the docs..." name="search"
-								class="form-control search-input">
-							<button type="submit" class="btn search-btn" value="Search"><i
-									class="fas fa-search"></i></button>
-						</form>
-					</div>
-
-					<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
-						<li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li>
-						<li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
-						<li class="list-inline-item"><a href="#"><i class="fab fa-slack fa-fw"></i></a></li>
-						<li class="list-inline-item"><a href="#"><i class="fab fa-product-hunt fa-fw"></i></a></li>
-					</ul>
-					<a href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderdocs-free-bootstrap-5-documentation-template-for-software-projects/"
-						class="btn btn-primary d-none d-lg-flex">Download</a>
+				<div class="pt-3 docs-top-utilities d-flex justify-content-end align-items-center">
+					<a href="mailto:info@beyond.com.sa" class="mx-3 d-flex gap-1 align-items-center">
+						<i class="fa fa-envelope"></i>
+						info@beyond.com.sa
+					</a>
+					<a href="./assets/SDK/basesdk-sources.jar"
+						class="btn btn-primary d-none d-lg-flex">API library</a>
 				</div>
 				<!--//docs-top-utilities-->
 			</div><!--//container-->
@@ -147,11 +136,7 @@
 					<!-- <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-9"><span
 								class="theme-icon-holder me-2"><i class="fas fa-lightbulb"></i></span>FAQs</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-9-1">Section
-							Item 9.1</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-9-2">Section
-							Item 9.2</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-9-3">Section
-							Item 9.3</a></li> -->
+							Item 9.1</a></li>-->
 				</ul>
 
 			</nav><!--//docs-nav-->
@@ -594,7 +579,6 @@ qrFormat.align=PrintAlign.FORMAT_ALIGN_CENTER;</pre></code>
 							</div>
 						</div>
 					</section><!--//section-->
-					(qrFormat,text)
 					<section class="docs-section" id="print-qrcode">
 						<h2  class="section-heading">printQrCode(<a href="#qrcode-format">QrCodeFormat</a> format, String
 							content) → void</h2>
@@ -640,11 +624,22 @@ startPrint(onPrintListener);
 							<code><pre>val onPrintListener=object: OnPrintTaskListener(){
 override fun onPrintResult(p0: Int) {
 	when(p0){
+		//TODO handle error
 		PrinterConstants.TASK_STATUS_ERR -> Log.e("Print result", "Error");
+
+		//TODO handle Cancellation
 		PrinterConstants.TASK_STATUS_CANCEL -> Log.i("Print result", "Cancelled");
+
+		//TODO handle error
 		PrinterConstants.TASK_STATUS_FAIL -> Log.e("Print result", "Failed");
+		
+		//TODO handle success
 		PrinterConstants.TASK_STATUS_SUCCESS -> Log.i("Print result", "Success");
+		
+		//TODO handle out of paper
 		PrinterConstants.TASK_STATUS_OUT_OF_PAPER -> Log.e("Print result", "Out of paper");
+		
+		//TODO handle overheating state
 		PrinterConstants.TASK_STATUS_OVER_HEAT -> Log.e("Print result", "Overheated");
 		PrinterConstants.TASK_STATUS_LOW_POWER -> Log.e("Print result", "Low dev power");
 		else ->Log.i("Print result","Unknown state");
@@ -701,12 +696,12 @@ startPrint(<a href="#item-6-1">onPrintListener</a>);
 					<section class="docs-section" id="item-8-1">
 						<h2 class="section-heading">Example Application</h2>
 						<p>Application to try out the printer services. You can download the source code (Kotlin) <a
-								href="https://github.com/AnasEsh/s680_printer">here</a></p>
+							 target="_blank"	href="https://github.com/AnasEsh/s680_printer">here</a></p>
 						<img src="assets/images/app_pic.jpeg" width="300" alt="" srcset="">
 					</section>
 					<section class="docs-section" id="item-8-4">
 						<h2 class="section-heading">Manufacturer documentation</h2>
-						<p>you can find the full printer documentation <a href="assets/SDK/POS_API/index.html">here</a>
+						<p>you can find the full printer documentation <a  target="_blank" href="assets/SDK/POS_API/index.html">here</a>
 						</p>
 					</section><!--//section-->
 
@@ -747,101 +742,7 @@ startPrint(<a href="#item-6-1">onPrintListener</a>);
 					<!--//section-->
 				</article><!--//docs-article-->
 
-				<!-- <article class="docs-article" id="section-9">
-					<header class="docs-header">
-						<h1 class="docs-heading">FAQs</h1>
-						<section class="docs-intro">
-							<p>Section intro goes here. You can list all your FAQs using the format
-								below.</p>
-						</section>
-					</header>
-					<section class="docs-section" id="item-9-1">
-						<h2 class="section-heading">Section Item 9.1 <small>(FAQ Category
-								One)</small></h2>
-						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>What's sit
-							amet quam eget lacinia?</h5>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-							commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et
-							magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-							ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
-							quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-							arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-							Nullam dictum felis eu pede mollis pretium.</p>
-						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>How to ipsum
-							dolor sit amet quam tortor?</h5>
-						<p>Donec sodales sagittis magna. Sed consequat, leo eget bibendum
-							sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce
-							vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis
-							sed, nonummy id, metus. Nullam accumsan lorem in dui. </p>
-						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Can I
-							bibendum sodales?</h5>
-						<p>Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque
-							ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. </p>
-						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Where arcu
-							sed urna gravida?</h5>
-						<p>Aenean et sodales nisi, vel efficitur sapien. Quisque molestie diam
-							libero, et elementum diam mollis ac. In dignissim aliquam est eget
-							ullamcorper. Sed id sodales tortor, eu finibus leo. Vivamus dapibus
-							sollicitudin justo vel fermentum. Curabitur nec arcu sed urna gravida
-							lobortis. Donec lectus est, imperdiet eu viverra viverra, ultricies nec
-							urna. </p>
-					</section>
-
-					<section class="docs-section" id="item-9-2">
-						<h2 class="section-heading">Section Item 9.2 <small>(FAQ Category
-								Two)</small></h2>
-						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>What's sit
-							amet quam eget lacinia?</h5>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-							commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et
-							magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-							ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
-							quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-							arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-							Nullam dictum felis eu pede mollis pretium.</p>
-						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>How to ipsum
-							dolor sit amet quam tortor?</h5>
-						<p>Donec sodales sagittis magna. Sed consequat, leo eget bibendum
-							sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce
-							vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis
-							sed, nonummy id, metus. Nullam accumsan lorem in dui. </p>
-						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Can I
-							bibendum sodales?</h5>
-						<p>Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque
-							ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. </p>
-						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Where arcu
-							sed urna gravida?</h5>
-						<p>Aenean et sodales nisi, vel efficitur sapien. Quisque molestie diam
-							libero, et elementum diam mollis ac. In dignissim aliquam est eget
-							ullamcorper. Sed id sodales tortor, eu finibus leo. Vivamus dapibus
-							sollicitudin justo vel fermentum. Curabitur nec arcu sed urna gravida
-							lobortis. Donec lectus est, imperdiet eu viverra viverra, ultricies nec
-							urna. </p>
-					</section>
-
-					<section class="docs-section" id="item-9-3">
-						<h2 class="section-heading">Section Item 9.3 <small>(FAQ Category
-								Three)</small></h2>
-						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>How to
-							dapibus sollicitudin justo vel fermentum?</h5>
-						<p>Donec sodales sagittis magna. Sed consequat, leo eget bibendum
-							sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce
-							vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis
-							sed, nonummy id, metus. Nullam accumsan lorem in dui. </p>
-						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>How long
-							bibendum sodales?</h5>
-						<p>Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque
-							ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. </p>
-						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Where dapibus
-							sollicitudin?</h5>
-						<p>Aenean et sodales nisi, vel efficitur sapien. Quisque molestie diam
-							libero, et elementum diam mollis ac. In dignissim aliquam est eget
-							ullamcorper. Sed id sodales tortor, eu finibus leo. Vivamus dapibus
-							sollicitudin justo vel fermentum. Curabitur nec arcu sed urna gravida
-							lobortis. Donec lectus est, imperdiet eu viverra viverra, ultricies nec
-							urna. </p>
-					</section>
-				</article> -->
+			
 
 				<footer class="footer">
 					<div class="container text-center py-5">
@@ -850,14 +751,12 @@ startPrint(<a href="#item-6-1">onPrintListener</a>);
 								style="color: #fb866a;"></i> by <a class="theme-link"
 								href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying
 								Riley</a> for developers</small>
-						<!-- <ul class="social-list list-unstyled pt-4 mb-0">
-							<li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li>
-							<li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
-							<li class="list-inline-item"><a href="#"><i class="fab fa-slack fa-fw"></i></a></li>
-							<li class="list-inline-item"><a href="#"><i class="fab fa-product-hunt fa-fw"></i></a></li>
-							<li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f fa-fw"></i></a></li>
-							<li class="list-inline-item"><a href="#"><i class="fab fa-instagram fa-fw"></i></a></li>
-						</ul> -->
+						<ul class="social-list list-unstyled pt-4 mb-0">
+							<li class="list-inline-item"><a href="https://x.com/beyondtksa"><i class="fab fa-twitter fa-fw"></i></a></li>
+							<li class="list-inline-item"><a href="https://www.linkedin.com/company/94836372/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a></li>
+							<li class="list-inline-item"><a href="https://www.facebook.com/Beyondtech2030/"><i class="fab fa-facebook-f fa-fw"></i></a></li>
+							<li class="list-inline-item"><a href="https://www.instagram.com/beyondtksa/"><i class="fab fa-instagram fa-fw"></i></a></li>
+						</ul>
 						<!--//social-list-->
 					</div>
 				</footer>
