@@ -1,7 +1,7 @@
 {
     "0":{
     "type": 4,
-    "content": "Printer test from web <br/> Anas Test",
+    "content": "<div>Printer test from web <br/> Anas Test</div>",
     "bold": 0,
     "align": 0
 }
