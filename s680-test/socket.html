@@ -1,35 +1,72 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>WebSocket Example</title>
 </head>
+
 <body>
     <h1>WebSocket Example</h1>
-    <button id="sendMessage">Send Hello World</button>
     <pre id="messages"></pre>
+    <textarea id="commands" cols="40" rows="30">
+        '\x1B@', 
+        '\x1Ba1', 
+        '\x1B!\x08',
+        'Hello World 123',
+        '\x1B@'
 
+        \x1B@, 
+        \x1Ba1, 
+        \x1B!\x08,
+        Hello World 123,
+        \x1B@
+
+        0x23 0x57 0x5a 0x50 0x4f 0x11 0x32 0x9e 0x57 0x8f 0x40 0x23 0xa1 0x7d 0xa1 0x28 0x66 0x0b 0xed 0xbe 0x3a 0x2f 0x62
+    </textarea>
+    <input type="checkbox" id="toBytes">
+    <button id="sendMessage">Send commands</button>
     <script>
+        function toBytes(commandList) {
+            const bytes = [];
+            for (const command of commandList) {
+                for (let i = 0; i < command.length; i++) {
+                    const charCode = command.charCodeAt(i);
+                    bytes.push(charCode);
+                }
+            }
+            return bytes;
+        }
+        function addUiMessage(message) {
+            document.getElementById('messages').textContent += `${message}\n`;
+        }
         const ws = new WebSocket('ws://localhost:9100');
 
-        ws.onopen = function() {
-            console.log('WebSocket connection established');
-            document.getElementById('messages').textContent += 'Connected to WebSocket server\n';
+        ws.onopen = function () {
+            addUiMessage('Connected to WebSocket server');
         };
 
-        ws.onmessage = function(event) {
-            console.log('Message from server:', event.data);
-            document.getElementById('messages').textContent += `Received: ${event.data}\n`;
+        ws.onmessage = function (event) {
+            addUiMessage(`Received: ${event.data}`);
         };
 
-        ws.onclose = function() {
-            console.log('WebSocket connection closed');
-            document.getElementById('messages').textContent += 'Disconnected from WebSocket server\n';
+        ws.onclose = function () {
+            addUiMessage('Disconnected from WebSocket server');
         };
 
-        document.getElementById('sendMessage').onclick = function() {
-            alert('chunk received');
-            ws.send('Hello World');
+        document.getElementById('sendMessage').onclick = function () {
+            let commands = document.getElementById('commands').value.replaceAll('\n', ' ').replace(/[ ]+/,' ').replaceAll(',', ' ').trim().split(' ').map(e => e.trim()).filter(e=>e);
+            const convert=document.getElementById('toBytes').checked;
+            
+            if(convert)
+                commands=toBytes(commands);
+            for (const command of commands) {
+                ws.send(command)
+            }
+            console.log(commands.join(' '))
+            addUiMessage(commands.join(' ') + '\nsent');
         };
+
     </script>
 </body>
+
 </html>
