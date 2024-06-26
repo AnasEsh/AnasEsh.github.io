@@ -15,21 +15,45 @@
         }
     </style>
     <script>
+        async function printEscCommandsToPOSPrinter(commands) {
+            const encoder = new TextEncoder();
+            const delay = 50; // Adjust the delay as needed
+
+            // Iterate through the commands and send them to the printer
+            for (const command of commands) {
+                const data = encoder.encode(command);
+                // Replace this with your actual printer write function
+                sendDataToPrinter(data);
+                await new Promise(resolve => setTimeout(resolve, delay));
+            }
+        }
+
+        function sendDataToPrinter(data) {
+            fetch('https://127.0.0.1:9100',{
+            'method':'POST',
+            'body':data
+        })
+        .catch(e=>{
+            alert(e.message)
+        })
+        }
+        
         function sendToLocalhost() {
-            try{
+            try {
                 eval(document.querySelector("#code-holder").value)
-            }catch(e){
+            } catch (e) {
                 alert(e.message)
             }
         }
+
+        function sendCommandsList(){
+            printEscCommandsToPOSPrinter(
+                document.querySelector("#code-holder").value.replaceAll('\n',' ').trim().split(',').map(e=>e.trim())
+            )
+        }
     </script>
 </head>
-
-<body>
-    <p>This page made just to tewst the printer</p>
-    <a href="beyond.s680.scheme://https://anasesh.github.io/s680-test/printText.json">Print Text</a>
-    <textarea style="width: 100%;" rows="40" id="code-holder">
-        fetch('https://127.0.0.1:9100',{
+ fetch('https://127.0.0.1:9100',{
             'method':'POST',
             'body':JSON.stringify([
             '\x1B@', 
@@ -42,8 +66,17 @@
         .catch(e=>{
             alert(e.message)
         })
+<body>
+    <p>This page made just to tewst the printer</p>
+    <a href="beyond.s680.scheme://https://anasesh.github.io/s680-test/printText.json">Print Text</a>
+    <textarea style="width: 100%;" rows="40" id="code-holder">
+        '\x1B@', 
+        '\x1Ba1', 
+        '\x1B!\x08',
+        'Hello World 123',
+        '\x1B@'
     </textarea>
-    <button onclick="sendToLocalhost()">
+    <button onclick="sendCommandsList()">
         Click to send code in the follwing box
     </button>
 </body>
