@@ -27,8 +27,8 @@
         };
 
         document.getElementById('sendMessage').onclick = function() {
+            alert('chunk received');
             ws.send('Hello World');
-            alert('chunk sent')
         };
     </script>
 </body>
