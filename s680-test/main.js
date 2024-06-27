@@ -56,8 +56,8 @@ function listToBytes(commandList) {
 }
 
 function sendCommandsList(){
-    const toBytes=document.querySelector('toBytes').checked
-    const oneByOne=document.querySelector('oneByOne').checked;
+    const toBytes=document.getElementById('toBytes').checked
+    const oneByOne=document.getElementById('oneByOne').checked;
     let commands=document.querySelector("#code-holder").value.replaceAll('\n',' ').trim().split(',').map(e=>e.trim());
     
     if(toBytes)
