@@ -19,7 +19,15 @@
 
 <body>
     <p>This page made just to tewst the printer</p>
-    <a href="beyond.s680.scheme://https://anasesh.github.io/s680-test/printText.json">Print Text</a>
+    <div>
+        <span>Convert commands to bytes</span>
+        <input type="checkbox" id="toBytes">
+    </div>
+    <div>
+        <span>Send commands one by one with delay</span>
+        <input type="checkbox" id="oneByOne">
+    </div>
+    <!-- <a href="beyond.s680.scheme://https://anasesh.github.io/s680-test/printText.json">Print Text</a> -->
     <textarea style="width: 100%;" rows="40" id="code-holder">
         '\x1B@', 
         '\x1Ba1', 
@@ -28,7 +36,7 @@
         '\x1B@'
     </textarea>
     <button onclick="sendCommandsList()">
-        Click to send code in the follwing box
+        Click to send the commands from the box
     </button>
 </body>
 

@@ -14,14 +14,15 @@ function tst(){
     })
 }
 async function printEscCommandsToPOSPrinter(commands) {
+    
     const encoder = new TextEncoder();
     const delay = 50; // Adjust the delay as needed
 
     // Iterate through the commands and send them to the printer
     for (const command of commands) {
-        const data = encoder.encode(command);
+        // const data = encoder.encode(command);
         // Replace this with your actual printer write function
-        sendDataToPrinter(data);
+        sendDataToPrinter(command);
         await new Promise(resolve => setTimeout(resolve, delay));
     }
 }
@@ -43,9 +44,27 @@ function sendToLocalhost() {
         alert(e.message)
     }
 }
+function listToBytes(commandList) {
+    const bytes = [];
+    for (const command of commandList) {
+        for (let i = 0; i < command.length; i++) {
+            const charCode = command.charCodeAt(i);
+            bytes.push(charCode);
+        }
+    }
+    return bytes;
+}
 
 function sendCommandsList(){
-    printEscCommandsToPOSPrinter(
-        document.querySelector("#code-holder").value.replaceAll('\n',' ').trim().split(',').map(e=>e.trim())
-    )
+    const toBytes=document.querySelector('toBytes').checked
+    const oneByOne=document.querySelector('oneByOne').checked;
+    let commands=document.querySelector("#code-holder").value.replaceAll('\n',' ').trim().split(',').map(e=>e.trim());
+    
+    if(toBytes)
+        commands=listToBytes(commands);
+    if(oneByOne){
+        printEscCommandsToPOSPrinter(commands)
+    }else{
+        sendDataToPrinter(commands.join(' '))
+    }
 }

@@ -39,7 +39,7 @@
         function addUiMessage(message) {
             document.getElementById('messages').textContent += `${message}\n`;
         }
-        const ws = new WebSocket('ws://localhost:9100');
+        const ws = new WebSocket('ws://127.0.0.1:9100');
 
         ws.onopen = function () {
             addUiMessage('Connected to WebSocket server');
