@@ -33,7 +33,7 @@ function sendDataToPrinter(data) {
     'body':data
 })
 .catch(e=>{
-    alert(e.message)
+    // alert(e.message)
 })
 }
 
