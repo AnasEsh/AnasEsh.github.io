@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>POS printer SDK | Beyond Tech</title>
+	<title>POS printer | Beyond Tech</title>
 
 	<!-- Meta -->
 	<meta charset="utf-8">
@@ -118,10 +118,9 @@
 							</span>Bluetooth Printing</a></li>
 
 							<li class="nav-item section-title mt-3"><a class="nav-link scrollto"
-								href="#network-printing"><span class="theme-icon-holder me-2">
-									<i class="fas fa-network-wired"></i>
-								</span>Network Printing</a></li>
-
+								href="#android-printing"><span class="theme-icon-holder me-2">
+									<svg xmlns="http://www.w3.org/2000/svg" width="0.85em" height="1em" viewBox="0 0 1408 1664"><path fill="currentColor" d="M493 355q16 0 27.5-11.5T532 316t-11.5-27.5T493 277t-27 11.5t-11 27.5t11 27.5t27 11.5m422 0q16 0 27-11.5t11-27.5t-11-27.5t-27-11.5t-27.5 11.5T876 316t11.5 27.5T915 355M103 539q42 0 72 30t30 72v430q0 43-29.5 73t-72.5 30t-73-30t-30-73V641q0-42 30-72t73-30m1060 19v666q0 46-32 78t-77 32h-75v227q0 43-30 73t-73 30t-73-30t-30-73v-227H635v227q0 43-30 73t-73 30q-42 0-72-30t-30-73l-1-227h-74q-46 0-78-32t-32-78V558zM931 153q107 55 171 153.5t64 215.5H241q0-117 64-215.5T477 153L406 22q-7-13 5-20q13-6 20 6l72 132q95-42 201-42t201 42L977 8q7-12 20-6q12 7 5 20zm477 488v430q0 43-30 73t-73 30q-42 0-72-30t-30-73V641q0-43 30-72.5t72-29.5q43 0 73 29.5t30 72.5"/></svg>
+								</span>Android Printer API</a></li>
 					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-8"><span
 								class="theme-icon-holder me-2"><i class="fas fa-book-reader"></i></span>Resources</a>
 					</li>
@@ -151,10 +150,13 @@
 				<article class="docs-article" id="section-1">
 					<header id="contents" class="docs-header">
 						<h1 class="docs-heading">Introduction <span class="docs-time">Last
-								updated: 2024-06-01</span></h1>
+								updated: 2024-06-30</span></h1>
 						<section class="docs-intro">
-							<p>This is a simplified version of the manufacturer's printer documentation, with code
-								examples to facilitate printer API usage.</p>
+							<p>This is documentation contains simplified version of the manufacturer's printer documentation, with code
+								examples to facilitate printer API usage.
+							<br>
+							Other printing options also demonstrated, with the required resources
+							</p>
 						</section><!--//docs-intro-->
 
 						<h5>Contents Overview:</h5>
@@ -162,7 +164,7 @@
 							<div class="tree">
 								<ul>
 									<li>
-										<a href="#">Printer</a>
+										<a href="#">Printer SDK</a>
 										<ul>
 											<li>
 												<a href="#text">Text</a>
@@ -218,6 +220,25 @@
 
 
 							</div>
+							<br>
+							<br>
+							<center>
+								<div class="tree">
+									<ul>
+										<li>
+											<a href="#">Other Printing Options</a>
+											<ul>
+												<li>
+													<a href="#bluetooth-printing">Bluetooth</a>
+												</li>
+												<li>
+													<a href="#android-printing">Android Native Printer API</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</center>
 								<!-- <div class="tree">
 									<ul>
 										<li>
@@ -684,6 +705,25 @@ startPrint(<a href="#item-6-1">onPrintListener</a>);
 							<ul>
 								<a href="#item-8-2">ESC commands</a>
 							</ul>
+							</p>
+						</section><!--//docs-intro-->
+					</header>
+
+				</article>
+				<article class="docs-article" id="android-printing">
+					<header class="docs-header">
+						<h1 class="docs-heading">Native Android Printing API</h1>
+						<section class="docs-intro">
+							<p>
+								Native android printing APIs provides a list of installed, network printers, and the device's internal printer (Trendit Printer).
+								<br>
+								to use the printer to print pdf documents, images, or any document:
+								<ul>
+									<li>click on print (in PDF viewer, gallery, etc..)</li>
+									<li>connected printers list will be prompted to you</li>
+									<li>Select Trendit Printer and specify ISO-58mm paper size</li>
+									<li>click print (Printer Icon)</li>
+								</ul>
 							</p>
 						</section><!--//docs-intro-->
 					</header>
